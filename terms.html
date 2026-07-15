@@ -8,148 +8,78 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --navy:#0A111F;
-    --teal:#12B5B0;
-    --gold:#C9A86A;
-    --ink:#1C2532;
-    --muted:#5B6676;
-    --paper:#FAFAF7;
-    --card:#FFFFFF;
-    --line:#E7E4DC;
-  }
+  :root{--navy:#0A111F;--teal:#12B5B0;--gold:#C9A86A;--ink:#1C2532;--muted:#5B6676;--paper:#FAFAF7;--card:#FFFFFF;--line:#E7E4DC;}
   *{margin:0;padding:0;box-sizing:border-box}
-  body{
-    font-family:'IBM Plex Sans Arabic',-apple-system,'Segoe UI',Tahoma,sans-serif;
-    background:var(--paper);
-    color:var(--ink);
-    line-height:1.9;
-    font-size:16px;
-  }
-  header{
-    background:var(--navy);
-    padding:2.2rem 1.5rem 2rem;
-    text-align:center;
-  }
-  .brand{
-    color:var(--gold);
-    font-size:1.5rem;
-    font-weight:700;
-    letter-spacing:.14em;
-  }
+  body{font-family:'IBM Plex Sans Arabic',-apple-system,'Segoe UI',Tahoma,sans-serif;background:var(--paper);color:var(--ink);line-height:1.9;font-size:16px;}
+  header{background:var(--navy);padding:2.2rem 1.5rem 2rem;text-align:center;}
+  .brand{color:var(--gold);font-size:1.5rem;font-weight:700;letter-spacing:.14em;}
   .brand span{color:#fff;font-weight:300}
-  .doc-title{
-    color:#fff;
-    font-size:1.35rem;
-    font-weight:600;
-    margin-top:.9rem;
-  }
-  .doc-meta{
-    color:#9AA5B5;
-    font-size:.85rem;
-    margin-top:.5rem;
-  }
+  .doc-title{color:#fff;font-size:1.35rem;font-weight:600;margin-top:.9rem;}
+  .doc-meta{color:#9AA5B5;font-size:.85rem;margin-top:.5rem;}
   .doc-meta b{color:var(--teal);font-weight:500}
-  nav.docnav{
-    background:#0E1626;
-    padding:.65rem 1rem;
-    text-align:center;
-    font-size:.88rem;
-  }
-  nav.docnav a{
-    color:#C5CDD9;
-    text-decoration:none;
-    margin:0 .9rem;
-    padding-bottom:2px;
-    border-bottom:1px solid transparent;
-  }
+  .lang-toggle{display:inline-flex;margin-top:1.3rem;border:1px solid rgba(201,168,106,.45);border-radius:999px;overflow:hidden;}
+  .lang-toggle button{background:transparent;color:#9AA5B5;border:none;font-family:inherit;font-size:.9rem;font-weight:600;padding:.4rem 1.3rem;cursor:pointer;transition:all .2s;}
+  .lang-toggle button.active{background:var(--gold);color:var(--navy);}
+  nav.docnav{background:#0E1626;padding:.65rem 1rem;text-align:center;font-size:.88rem;}
+  nav.docnav a{color:#C5CDD9;text-decoration:none;margin:0 .9rem;padding-bottom:2px;border-bottom:1px solid transparent;}
   nav.docnav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
   nav.docnav a.current{color:var(--gold)}
-  main{
-    max-width:820px;
-    margin:2.5rem auto 3.5rem;
-    padding:0 1.25rem;
-  }
-  .card{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:14px;
-    padding:2.4rem 2.2rem;
-    box-shadow:0 1px 3px rgba(10,17,31,.05);
-  }
-  .intro{
-    color:var(--muted);
-    font-size:.98rem;
-    padding-bottom:1.6rem;
-    border-bottom:1px solid var(--line);
-    margin-bottom:1.6rem;
-  }
-  h2{
-    font-size:1.08rem;
-    font-weight:700;
-    color:var(--navy);
-    margin:2rem 0 .6rem;
-    padding-right:.85rem;
-    border-right:3px solid var(--gold);
-  }
+  main{max-width:820px;margin:2.5rem auto 3.5rem;padding:0 1.25rem;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:2.4rem 2.2rem;box-shadow:0 1px 3px rgba(10,17,31,.05);}
+  .intro{color:var(--muted);font-size:.98rem;padding-bottom:1.6rem;border-bottom:1px solid var(--line);margin-bottom:1.6rem;}
+  h2{font-size:1.08rem;font-weight:700;color:var(--navy);margin:2rem 0 .6rem;padding-right:.85rem;border-right:3px solid var(--gold);}
   h2:first-of-type{margin-top:.4rem}
-  p, li{font-size:.97rem;color:var(--ink)}
+  p,li{font-size:.97rem;color:var(--ink)}
   p{margin-bottom:.7rem}
   ul{list-style:none;margin:.2rem 0 .8rem}
-  li{padding-right:1.1rem;position:relative;margin-bottom:.35rem}
-  li::before{
-    content:"";
-    position:absolute;
-    right:0;
-    top:.85em;
-    width:5px;height:5px;
-    border-radius:50%;
-    background:var(--teal);
-  }
-  .contact-block{
-    background:#F4F7F7;
-    border:1px solid #DDEAE9;
-    border-radius:10px;
-    padding:1rem 1.2rem;
-    margin:.6rem 0 .9rem;
-    font-size:.95rem;
-  }
+  li{position:relative;margin-bottom:.35rem;padding-right:1.1rem}
+  li::before{content:"";position:absolute;right:0;top:.85em;width:5px;height:5px;border-radius:50%;background:var(--teal)}
+  .contact-block{background:#F4F7F7;border:1px solid #DDEAE9;border-radius:10px;padding:1rem 1.2rem;margin:.6rem 0 .9rem;font-size:.95rem;}
   .contact-block div{margin:.15rem 0}
   .contact-block a{color:var(--teal);text-decoration:none;font-weight:600}
-  footer{
-    text-align:center;
-    color:var(--muted);
-    font-size:.82rem;
-    padding:1.5rem 1rem 2.5rem;
-  }
+  .precedence{background:#FBF6EC;border:1px solid #E7D6B0;border-radius:10px;padding:.9rem 1.1rem;margin-bottom:1.4rem;font-size:.9rem;color:#7A6636;}
+  footer{text-align:center;color:var(--muted);font-size:.82rem;padding:1.5rem 1rem 2.5rem;}
   footer a{color:var(--teal);text-decoration:none}
-  @media (max-width:600px){
-    .card{padding:1.6rem 1.2rem}
-    body{font-size:15px}
-  }
+  html[lang="en"]{direction:ltr}
+  html[lang="en"] body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif}
+  html[lang="en"] h2{padding-right:0;padding-left:.85rem;border-right:none;border-left:3px solid var(--gold)}
+  html[lang="en"] li{padding-right:0;padding-left:1.1rem}
+  html[lang="en"] li::before{right:auto;left:0}
+  .en{display:none}
+  html[lang="en"] .ar{display:none}
+  html[lang="en"] .en{display:block}
+  .ar-inline{display:inline}
+  html[lang="en"] .ar-inline{display:none}
+  .en-inline{display:none}
+  html[lang="en"] .en-inline{display:inline}
+  @media (max-width:600px){.card{padding:1.6rem 1.2rem}body{font-size:15px}}
 </style>
 </head>
 <body>
-
 <header>
   <div class="brand">PROVATTO<span> | بروفاتو</span></div>
-  <div class="doc-title">شروط الاستخدام</div>
-  <div class="doc-meta">تاريخ السريان: <b>١٤ يوليو ٢٠٢٦م</b> &nbsp;·&nbsp; آخر تحديث: <b>١٤ يوليو ٢٠٢٦م</b></div>
+  <div class="doc-title"><span class="ar-inline">شروط الاستخدام</span><span class="en-inline">Terms of Use</span></div>
+  <div class="doc-meta">
+    <span class="ar-inline">تاريخ السريان: <b>١٤ يوليو ٢٠٢٦م</b> · آخر تحديث: <b>١٤ يوليو ٢٠٢٦م</b></span>
+    <span class="en-inline">Effective date: <b>14 July 2026</b> · Last updated: <b>14 July 2026</b></span>
+  </div>
+  <div class="lang-toggle">
+    <button id="btn-ar" class="active" onclick="setLang('ar')">العربية</button>
+    <button id="btn-en" onclick="setLang('en')">English</button>
+  </div>
 </header>
-
 <nav class="docnav">
-  <a href="privacy.html">سياسة الخصوصية</a>
-  <a href="terms.html" class="current">شروط الاستخدام</a>
-  <a href="support.html">الدعم</a>
+  <a href="privacy.html"><span class="ar-inline">سياسة الخصوصية</span><span class="en-inline">Privacy Policy</span></a>
+  <a href="terms.html" class="current"><span class="ar-inline">شروط الاستخدام</span><span class="en-inline">Terms of Use</span></a>
+  <a href="support.html"><span class="ar-inline">الدعم</span><span class="en-inline">Support</span></a>
 </nav>
-
 <main>
 <div class="card">
+<div class="precedence en">Note: This English text is a translation provided for convenience. The Arabic version is the authoritative reference in case of any discrepancy in interpretation.</div>
 
+<div class="ar">
 <p class="intro">مرحبًا بك في تطبيق Provatto. تحكم هذه الشروط استخدامك للتطبيق والخدمات والميزات المرتبطة به. ويعد استخدامك للتطبيق أو إنشاء حساب فيه أو الاستمرار في استعماله موافقة منك على هذه الشروط بما لا يتعارض مع الأنظمة المعمول بها في المملكة العربية السعودية.</p>
-
 <h2>1) التعريفات</h2>
-<p>لأغراض هذه الشروط، يكون للكلمات والعبارات الآتية المعاني المبينة أمام كل منها ما لم يقتض السياق خلاف ذلك:</p>
 <ul>
   <li><b>التطبيق أو المنصة:</b> تطبيق Provatto وما يتبعه من واجهات وخدمات ومحتوى ووظائف.</li>
   <li><b>المؤسسة:</b> مؤسسة زياد ناصر الوشمي للتجارة، سجل تجاري رقم 7053851809، وهي الجهة المشغلة للتطبيق.</li>
@@ -158,7 +88,6 @@
   <li><b>المقتنى:</b> الساعة أو القطعة أو المنتج الذي يسجله المستخدم في التطبيق.</li>
   <li><b>تسجيل انتقال السجل الرقمي:</b> الوظيفة التي تتيح للمستخدم طلب انتقال السجل الرقمي الخاص بمقتنى معين إلى حساب مستخدم آخر داخل التطبيق بعد موافقته.</li>
 </ul>
-
 <h2>2) بيانات موفر الخدمة</h2>
 <div class="contact-block">
   <div>اسم موفر الخدمة: مؤسسة زياد ناصر الوشمي للتجارة</div>
@@ -167,33 +96,17 @@
   <div>العنوان: المملكة العربية السعودية، الرياض، حي الغدير، الرمز البريدي 13311</div>
 </div>
 <p>وبذلك تلتزم المؤسسة بالإفصاح عن بياناتها الأساسية في المحل الإلكتروني وفقًا للمادة السادسة من نظام التجارة الإلكترونية.</p>
-
 <h2>3) أهلية الاستخدام</h2>
 <p>يجب أن يكون المستخدم قد أتم ثماني عشرة سنة هجرية ويتمتع بالأهلية النظامية اللازمة للتصرف والتعاقد، وفقًا للمادة الثانية عشرة من نظام المعاملات المدنية. ويجوز للمؤسسة تعليق أو إنهاء أي حساب يتبين أنه أنشئ أو استعمل بالمخالفة لذلك.</p>
-
 <h2>4) طبيعة الخدمة</h2>
-<p>Provatto منصة تقنية تتيح للمستخدم:</p>
-<ul>
-  <li>إنشاء سجل رقمي لمقتنياته من الساعات.</li>
-  <li>حفظ البيانات المتعلقة بها وإدارتها وتحديثها.</li>
-  <li>توثيق بعض الوقائع أو الأحداث داخل التطبيق مثل الشراء أو الصيانة أو التحديث أو انتقال السجل الرقمي.</li>
-</ul>
-<p>ولا تمثل السجلات أو البيانات أو الإشعارات أو المخرجات الصادرة من التطبيق:</p>
-<ul>
-  <li>سند ملكية رسميًا.</li>
-  <li>شهادة أصالة.</li>
-  <li>توثيقًا حكوميًا.</li>
-  <li>بينة نهائية مستقلة على صحة الملكية أو سلامة المصدر أو مشروعية التملك.</li>
-</ul>
-
+<p>Provatto منصة تقنية تتيح للمستخدم إنشاء سجل رقمي لمقتنياته من الساعات، وحفظ البيانات المتعلقة بها وإدارتها وتحديثها، وتوثيق بعض الوقائع أو الأحداث داخل التطبيق مثل الشراء أو الصيانة أو التحديث أو انتقال السجل الرقمي.</p>
+<p>ولا تمثل السجلات أو البيانات أو الإشعارات أو المخرجات الصادرة من التطبيق سند ملكية رسميًا، ولا شهادة أصالة، ولا توثيقًا حكوميًا، ولا بينة نهائية مستقلة على صحة الملكية أو سلامة المصدر أو مشروعية التملك.</p>
 <h2>5) عدم التحقق من الأصالة أو المصدر</h2>
 <p>لا تتحقق المؤسسة من أصالة أي ساعة أو قطعة أو مكون أو ملحق أو مستند مرتبط بها، ولا تقدم أي ضمان صريح أو ضمني بشأن الأصالة أو المصدر أو الوصف أو الحالة أو القيمة أو المشروعية أو خلو المنتج من التقليد أو الغش أو التزوير.</p>
 <p>وجميع البيانات والمحتوى المعروض في التطبيق مصدره المستخدمون أو من يفوضونهم، ويقع على عاتق المستخدم وحده التحقق من الأصالة والمصدر والوصف وسلامة المستندات قبل أي شراء أو بيع أو مبادلة أو اعتماد على المعلومات.</p>
 <p>ولا يجوز تفسير أي عرض أو وصف أو تصنيف أو سجل أو حالة أو مخرجات داخل التطبيق على أنه تأكيد من المؤسسة لأصالة المقتنى أو ملكيته أو قيمته أو سلامة تاريخه.</p>
-
 <h2>6) تسجيل انتقال السجل الرقمي</h2>
-<p>قد يتيح التطبيق وظيفة تسجيل انتقال السجل الرقمي للمقتنى من حساب إلى آخر داخل التطبيق، بناءً على طلب أحد المستخدمين وموافقة الطرف الآخر.</p>
-<p>ويقر المستخدم ويوافق على ما يأتي:</p>
+<p>قد يتيح التطبيق وظيفة تسجيل انتقال السجل الرقمي للمقتنى من حساب إلى آخر داخل التطبيق، بناءً على طلب أحد المستخدمين وموافقة الطرف الآخر. ويقر المستخدم ويوافق على ما يأتي:</p>
 <ul>
   <li>أن هذه الوظيفة غرضها توثيق إقرار رقمي داخل المنصة بانتقال السجل الرقمي أو تحديث الحائز المسجل أو إثبات واقعة تمت بين الطرفين خارج المنصة.</li>
   <li>أن هذه الوظيفة لا تنشئ بمفردها بيعًا أو هبة أو حوالة أو نقل ملكية نظاميًا ملزمًا، ولا تغني عن أي متطلبات نظامية أو تعاقدية لازمة بين الأطراف.</li>
@@ -201,38 +114,24 @@
   <li>أن المستخدمين وحدهم مسؤولون عن التحقق من صفة المتصرف، وصحة الملكية، وسلامة المستندات، ومشروعية التصرف، وسداد أي مقابل مالي، والوفاء بأي متطلبات نظامية أو تعاقدية ذات صلة.</li>
   <li>أن المؤسسة لا تضمن إتمام أي اتفاق بين المستخدمين، ولا تتحمل مسؤولية النزاعات التي تنشأ عن ذلك.</li>
 </ul>
-<p>ويأتي هذا التحديد اتساقًا مع المواد الحادية والثلاثين والثانية والثلاثين والثالثة والثلاثين من نظام المعاملات المدنية، التي تقرر أن العقد قد ينعقد بارتباط الإيجاب بالقبول وأن التعبير عن الإرادة قد يكون إلكترونيًا أو كتابيًا أو ضمنيًا؛ ولذلك فإن وظيفة التطبيق لا ينبغي تفسيرها بذاتها على أنها تمثل تصرفًا ناقلًا للملكية أو عقدًا مكتمل الأركان ما لم تتوافر شروط ذلك خارج نطاق المنصة أو بمقتضى اتفاق مستقل بين الأطراف.</p>
-
+<p>ويأتي هذا التحديد اتساقًا مع المواد الحادية والثلاثين والثانية والثلاثين والثالثة والثلاثين من نظام المعاملات المدنية؛ ولذلك فإن وظيفة التطبيق لا ينبغي تفسيرها بذاتها على أنها تمثل تصرفًا ناقلًا للملكية أو عقدًا مكتمل الأركان ما لم تتوافر شروط ذلك خارج نطاق المنصة أو بمقتضى اتفاق مستقل بين الأطراف.</p>
 <h2>7) المنصة ليست طرفًا في المعاملات</h2>
 <p>المؤسسة ليست بائعًا ولا مشتريًا ولا وكيلًا ولا وسيطًا ضامنًا لأي معاملة بين المستخدمين أو بينهم وبين الغير، ولا تنوب عن أي طرف في التحقق من الملكية أو الأصالة أو القيمة أو السلامة النظامية للمقتنيات أو المستندات أو التصرفات.</p>
-
 <h2>8) الحسابات والتسجيل</h2>
-<p>لاستخدام بعض مزايا التطبيق، يجب إنشاء حساب وتزويد المؤسسة ببيانات صحيحة وكاملة ومحدثة. ويتحمل المستخدم مسؤولية:</p>
-<ul>
-  <li>المحافظة على سرية بيانات الدخول.</li>
-  <li>جميع الأنشطة التي تتم من خلال حسابه ما لم يثبت وجود وصول غير مشروع خارج عن إرادته وقد أخطر المؤسسة بذلك دون تأخير.</li>
-  <li>تحديث بياناته عند تغيرها.</li>
-</ul>
-<p>ويجوز للمؤسسة طلب التحقق من بعض البيانات أو اتخاذ إجراءات تقنية أو تشغيلية للتحقق من سلامة الحساب أو حمايته.</p>
-
+<p>لاستخدام بعض مزايا التطبيق، يجب إنشاء حساب وتزويد المؤسسة ببيانات صحيحة وكاملة ومحدثة. ويتحمل المستخدم مسؤولية المحافظة على سرية بيانات الدخول، وجميع الأنشطة التي تتم من خلال حسابه ما لم يثبت وجود وصول غير مشروع خارج عن إرادته وقد أخطر المؤسسة بذلك دون تأخير، وتحديث بياناته عند تغيرها.</p>
 <h2>9) التزامات المستخدم وتعهداته</h2>
-<p>يقر المستخدم ويتعهد بما يأتي:</p>
 <ul>
   <li>أن جميع البيانات والمعلومات والصور والمستندات التي يرفعها أو يدخلها صحيحة وغير مضللة بقدر علمه.</li>
   <li>أنه المالك النظامي للمقتنى محل التسجيل أو مفوض تفويضًا صحيحًا بإدارة بياناته أو التصرف فيها داخل التطبيق.</li>
   <li>أن استخدامه للتطبيق لا ينتهك حقوق الغير ولا أي نظام معمول به في المملكة.</li>
-  <li>أنه لن يرفع أو ينشر أو يشارك أي بيانات أو صور أو مستندات مزورة أو مضللة أو من شأنها الإيهام بأصالة أو ملكية أو مصدر غير صحيح.</li>
+  <li>أنه لن يرفع أو ينشر أي بيانات أو صور أو مستندات مزورة أو مضللة أو من شأنها الإيهام بأصالة أو ملكية أو مصدر غير صحيح.</li>
   <li>أنه لن يستخدم التطبيق في الاحتيال أو انتحال الصفة أو تضليل الغير أو تسويق منتجات مغشوشة أو مقلدة أو محل نزاع دون إفصاح صحيح.</li>
   <li>أنه لن يرفع وثائق رسمية أو بيانات حساسة تخصه أو تخص الغير ما لم يكن ذلك مطلوبًا صراحة من المؤسسة ولغرض نظامي مشروع.</li>
   <li>أنه لن يستخدم بيانات اتصال الغير داخل التطبيق إلا إذا كان له حق مشروع في استخدامها للغرض المحدد في الوظيفة ذات الصلة.</li>
 </ul>
-
 <h2>10) المحتوى المرفوع من المستخدم</h2>
-<p>يحتفظ المستخدم -فيما بينه وبين المؤسسة- بحقوقه على المحتوى الذي يرفعه إلى التطبيق، مع منحه المؤسسة ترخيصًا غير حصري بتخزينه ومعالجته وعرضه وإتاحته فنيًا بالقدر اللازم لتشغيل التطبيق وتنفيذ وظائفه وتحسينه والامتثال للأنظمة.</p>
-<p>ويتحمل المستخدم وحده المسؤولية الكاملة عن المحتوى الذي يرفعه أو يدخله أو يشاركه، وعن أي مطالبة تنشأ عنه.</p>
-
+<p>يحتفظ المستخدم -فيما بينه وبين المؤسسة- بحقوقه على المحتوى الذي يرفعه إلى التطبيق، مع منحه المؤسسة ترخيصًا غير حصري بتخزينه ومعالجته وعرضه وإتاحته فنيًا بالقدر اللازم لتشغيل التطبيق وتنفيذ وظائفه وتحسينه والامتثال للأنظمة. ويتحمل المستخدم وحده المسؤولية الكاملة عن المحتوى الذي يرفعه أو يدخله أو يشاركه، وعن أي مطالبة تنشأ عنه.</p>
 <h2>11) المحتوى المحظور</h2>
-<p>يُحظر على المستخدم استخدام التطبيق فيما يأتي:</p>
 <ul>
   <li>رفع أو تداول بيانات كاذبة أو مضللة.</li>
   <li>انتحال شخصية الغير أو استخدام بياناتهم دون مسوغ.</li>
@@ -241,98 +140,178 @@
   <li>محاولة اختراق التطبيق أو تعطيله أو العبث بأنظمته أو تجاوز تدابير الحماية.</li>
   <li>استخدام التطبيق لأي غرض غير مشروع أو مخالف للأنظمة أو الآداب العامة.</li>
 </ul>
-
 <h2>12) دقة المعلومات والاعتماد عليها</h2>
-<p>قد يحتوي التطبيق على بيانات مدخلة من المستخدمين أو مستخرجة من تفاعلاتهم، وقد تتضمن أخطاء أو سهوًا أو معلومات غير محدثة. لذلك لا يجوز الاعتماد على التطبيق وحده لاتخاذ قرارات شراء أو بيع أو تقييم أو تمويل أو تأمين أو تقاضٍ أو أي قرارات قانونية أو مالية أو تجارية، دون التحقق المستقل من المعلومات والمستندات ذات الصلة.</p>
-
+<p>قد يحتوي التطبيق على بيانات مدخلة من المستخدمين وقد تتضمن أخطاء أو سهوًا أو معلومات غير محدثة. لذلك لا يجوز الاعتماد على التطبيق وحده لاتخاذ قرارات شراء أو بيع أو تقييم أو تمويل أو تأمين أو تقاضٍ أو أي قرارات قانونية أو مالية أو تجارية، دون التحقق المستقل من المعلومات والمستندات ذات الصلة.</p>
 <h2>13) عدم تقديم استشارة أو تقييم مهني</h2>
 <p>ما لم يُنص صراحة على خلاف ذلك في خدمة مستقلة وشروط إضافية خاصة بها، فإن التطبيق لا يقدم استشارات مهنية أو قانونية أو فنية أو خبرة معتمدة أو تقييمًا رسميًا للأصالة أو القيمة أو السلامة أو المصدر.</p>
 <p>وأي خدمات مستقبلية -بما في ذلك خدمات التقييم البشري أو الفحص التقني أو التحليل بالذكاء الاصطناعي- إن أطلقت لاحقًا، فتخضع لشروط إضافية وسياسات محدثة، ولا تعد ضمانًا نهائيًا إلا إذا نص على ذلك صراحة.</p>
-
 <h2>14) التعديلات على الخدمة</h2>
 <p>يجوز للمؤسسة تعديل التطبيق أو إضافة خصائص أو تعليق بعضها أو إيقافها أو تطويرها في أي وقت، بما في ذلك إعادة تسمية الوظائف أو تعديل طريقة عملها أو فرض متطلبات إضافية لاستخدامها، متى كان ذلك لأسباب تشغيلية أو أمنية أو نظامية أو تجارية.</p>
-
 <h2>15) الرسوم والخدمات المدفوعة</h2>
-<p>لا تتضمن النسخة الحالية من التطبيق معالجة مدفوعات داخل التطبيق بحسب الوضع التشغيلي الحالي. وإذا تقرر مستقبلاً تقديم خدمات مدفوعة أو اشتراكات أو مزايا مالية، فستخضع لأحكام إضافية تبين السعر وآلية الدفع والفاتورة وأحكام الإلغاء أو الفسخ والتنفيذ وفق الأنظمة المطبقة، بما في ذلك نظام التجارة الإلكترونية عند انطباقه.</p>
-
+<p>لا تتضمن النسخة الحالية من التطبيق معالجة مدفوعات داخل التطبيق بحسب الوضع التشغيلي الحالي. وإذا تقرر مستقبلاً تقديم خدمات مدفوعة أو اشتراكات، فستخضع لأحكام إضافية تبين السعر وآلية الدفع والفاتورة وأحكام الإلغاء أو الفسخ والتنفيذ وفق الأنظمة المطبقة، بما في ذلك نظام التجارة الإلكترونية عند انطباقه.</p>
 <h2>16) حقوق الملكية الفكرية</h2>
-<p>جميع الحقوق المتعلقة بالتطبيق، بما في ذلك الاسم التجاري والعلامات والشعارات والتصاميم والواجهات وقواعد البيانات والترتيب والمحتوى المملوك للمؤسسة والبرمجيات والمواد المنشورة من قبلها، هي للمؤسسة أو لمرخصيها، وتحميها الأنظمة ذات الصلة. ولا يجوز نسخها أو تعديلها أو استغلالها أو إعادة نشرها أو إنشاء أعمال مشتقة منها دون موافقة خطية مسبقة، إلا في الحدود التي يجيزها النظام.</p>
-
+<p>جميع الحقوق المتعلقة بالتطبيق، بما في ذلك الاسم التجاري والعلامات والشعارات والتصاميم والواجهات وقواعد البيانات والمحتوى المملوك للمؤسسة والبرمجيات، هي للمؤسسة أو لمرخصيها، وتحميها الأنظمة ذات الصلة. ولا يجوز نسخها أو تعديلها أو استغلالها أو إعادة نشرها أو إنشاء أعمال مشتقة منها دون موافقة خطية مسبقة، إلا في الحدود التي يجيزها النظام.</p>
 <h2>17) الخصوصية والبيانات الشخصية</h2>
-<p>يخضع جمع البيانات الشخصية ومعالجتها واستخدامها والإفصاح عنها لـ<a href="privacy.html" style="color:var(--teal);font-weight:600">سياسة الخصوصية</a> الخاصة بالتطبيق، وتعد جزءًا مكملًا لهذه الشروط. وفي حال التعارض بين هذه الشروط وسياسة الخصوصية فيما يتعلق بالبيانات الشخصية، فتقدم الأحكام الأكثر تحديدًا في سياسة الخصوصية في حدود موضوعها.</p>
-
+<p>يخضع جمع البيانات الشخصية ومعالجتها واستخدامها والإفصاح عنها لـ<a href="privacy.html" style="color:var(--teal);font-weight:600">سياسة الخصوصية</a> الخاصة بالتطبيق، وتعد جزءًا مكملًا لهذه الشروط. وفي حال التعارض فيما يتعلق بالبيانات الشخصية، فتقدم الأحكام الأكثر تحديدًا في سياسة الخصوصية في حدود موضوعها.</p>
 <h2>18) الإشعارات والاتصالات الإلكترونية</h2>
-<p>يوافق المستخدم على تلقي الإشعارات والرسائل المتعلقة بالحساب أو الأمان أو استخدام التطبيق أو التحديثات الجوهرية أو الطلبات التشغيلية عبر التطبيق أو الرسائل النصية أو البريد الإلكتروني أو أي وسيلة إلكترونية مسجلة لديه، وذلك وفقًا لما يجيزه نظام التعاملات الإلكترونية ونظام التجارة الإلكترونية.</p>
-
+<p>يوافق المستخدم على تلقي الإشعارات والرسائل المتعلقة بالحساب أو الأمان أو استخدام التطبيق أو التحديثات الجوهرية عبر التطبيق أو الرسائل النصية أو البريد الإلكتروني أو أي وسيلة إلكترونية مسجلة لديه، وفقًا لما يجيزه نظام التعاملات الإلكترونية ونظام التجارة الإلكترونية.</p>
 <h2>19) التعليق والإنهاء</h2>
-<p>يجوز للمؤسسة تعليق الحساب أو تقييد الوصول إلى التطبيق أو إنهاء الاستخدام، فورًا أو بعد إشعار بحسب ما تراه مناسبًا، في الحالات الآتية:</p>
-<ul>
-  <li>مخالفة هذه الشروط أو أي سياسة معلنة.</li>
-  <li>الاشتباه في سلوك احتيالي أو مضلل أو غير مشروع.</li>
-  <li>تقديم بيانات كاذبة أو مستندات غير صحيحة.</li>
-  <li>المساس بأمن التطبيق أو المستخدمين أو حقوق الغير.</li>
-  <li>وجود متطلب نظامي أو طلب من جهة مختصة.</li>
-</ul>
-<p>ولا يترتب على التعليق أو الإنهاء إعفاء المستخدم من المسؤوليات أو الالتزامات التي نشأت قبل ذلك.</p>
-
+<p>يجوز للمؤسسة تعليق الحساب أو تقييد الوصول أو إنهاء الاستخدام، فورًا أو بعد إشعار، في حالات مخالفة هذه الشروط، أو الاشتباه في سلوك احتيالي أو مضلل، أو تقديم بيانات كاذبة، أو المساس بأمن التطبيق أو المستخدمين، أو وجود متطلب نظامي. ولا يترتب على التعليق أو الإنهاء إعفاء المستخدم من المسؤوليات التي نشأت قبل ذلك.</p>
 <h2>20) حدود المسؤولية</h2>
-<p>إلى أقصى حد يسمح به النظام، لا تتحمل المؤسسة المسؤولية عن:</p>
-<ul>
-  <li>صحة أو دقة أو اكتمال البيانات التي يدخلها المستخدمون أو الغير.</li>
-  <li>أصالة الساعات أو مصدرها أو مشروعيتها أو حالتها أو قيمتها.</li>
-  <li>أي معاملة أو تفاوض أو اتفاق أو نزاع أو خسارة تنشأ بين المستخدمين أو بينهم وبين الغير.</li>
-  <li>أي قرارات شراء أو بيع أو اعتماد أو تقييم أو تصرف اتخذت بناءً على بيانات التطبيق.</li>
-  <li>أي انقطاع أو تأخير أو خطأ تقني أو تعطل أو فقد بيانات ناتج عن أسباب خارجة عن الإرادة أو عن أعمال الغير أو عن القوة القاهرة، ما لم يوجد تقصير يوجب المسؤولية نظامًا.</li>
-</ul>
-<p>وفي جميع الأحوال، لا يسري أي إعفاء أو تحديد للمسؤولية على ما لا يجوز نظامًا استبعاده أو الحد منه، وبخاصة ما ينشأ عن الغش أو الخطأ الجسيم أو المسؤولية التقصيرية، وفقًا للمادة الثالثة والسبعين بعد المائة من نظام المعاملات المدنية.</p>
-
+<p>إلى أقصى حد يسمح به النظام، لا تتحمل المؤسسة المسؤولية عن صحة أو دقة البيانات التي يدخلها المستخدمون، ولا أصالة الساعات أو مصدرها أو قيمتها، ولا أي معاملة أو نزاع أو خسارة تنشأ بين المستخدمين، ولا أي قرارات اتخذت بناءً على بيانات التطبيق، ولا أي انقطاع أو خطأ تقني ناتج عن أسباب خارجة عن الإرادة أو القوة القاهرة، ما لم يوجد تقصير يوجب المسؤولية نظامًا.</p>
+<p>وفي جميع الأحوال، لا يسري أي إعفاء أو تحديد للمسؤولية على ما لا يجوز نظامًا استبعاده، وبخاصة ما ينشأ عن الغش أو الخطأ الجسيم، وفقًا للمادة الثالثة والسبعين بعد المائة من نظام المعاملات المدنية.</p>
 <h2>21) التعويض</h2>
-<p>يلتزم المستخدم بتعويض المؤسسة والدفاع عنها وإبراء ذمتها من أي مطالبات أو دعاوى أو أضرار أو خسائر أو تكاليف أو مصروفات -بما في ذلك التكاليف النظامية المعقولة- تنشأ بسبب:</p>
-<ul>
-  <li>مخالفته لهذه الشروط.</li>
-  <li>إدخاله أو نشره بيانات أو مستندات كاذبة أو مضللة.</li>
-  <li>ادعائه ملكية أو صفة غير صحيحة.</li>
-  <li>انتهاكه لحقوق الغير أو للأنظمة المطبقة.</li>
-  <li>استخدامه غير المشروع للتطبيق أو إساءة استعماله.</li>
-</ul>
-
+<p>يلتزم المستخدم بتعويض المؤسسة والدفاع عنها وإبراء ذمتها من أي مطالبات أو أضرار أو خسائر أو تكاليف تنشأ بسبب مخالفته لهذه الشروط، أو إدخاله بيانات كاذبة أو مضللة، أو ادعائه ملكية أو صفة غير صحيحة، أو انتهاكه لحقوق الغير أو للأنظمة المطبقة، أو استخدامه غير المشروع للتطبيق.</p>
 <h2>22) الإقرارات النظامية المتعلقة بالتعامل الإلكتروني</h2>
-<p>يقر المستخدم بأن بعض الإجراءات داخل التطبيق قد تتم أو تثبت أو تحفظ بوسائل إلكترونية، وأن السجلات الإلكترونية والإشعارات الإلكترونية قد تكون لها حجيتها وفقًا لنظام التعاملات الإلكترونية متى استوفت شروطه. ومع ذلك، فإن أي أثر قانوني خاص بتصرف بين المستخدمين يبقى خاضعًا لطبيعة التصرف وشروطه النظامية والوقائع المحيطة به.</p>
-
+<p>يقر المستخدم بأن بعض الإجراءات داخل التطبيق قد تتم أو تثبت أو تحفظ بوسائل إلكترونية، وأن السجلات والإشعارات الإلكترونية قد تكون لها حجيتها وفقًا لنظام التعاملات الإلكترونية متى استوفت شروطه. ومع ذلك، فإن أي أثر قانوني خاص بتصرف بين المستخدمين يبقى خاضعًا لطبيعة التصرف وشروطه النظامية.</p>
 <h2>23) الإعلانات والمحتوى التسويقي</h2>
-<p>إذا تضمن التطبيق أو مواده التسويقية أي إعلان أو وصف للخدمة، فيجب تفسيره في حدود الوظائف المعلنة فعلًا. ولا يجوز فهم أي إعلان أو عبارة تسويقية على أنه تعهد بأصالة المقتنيات أو صحة ملكيتها أو ضمان انتقالها النظامي أو اعتمادها رسميًا. وتلتزم المؤسسة بعدم تضمين الإعلانات ما من شأنه تضليل المستهلك، وفقًا للمادتين العاشرة والحادية عشرة من نظام التجارة الإلكترونية.</p>
-
+<p>إذا تضمن التطبيق أو مواده التسويقية أي إعلان أو وصف للخدمة، فيجب تفسيره في حدود الوظائف المعلنة فعلًا. ولا يجوز فهم أي إعلان على أنه تعهد بأصالة المقتنيات أو صحة ملكيتها أو ضمان انتقالها النظامي. وتلتزم المؤسسة بعدم تضمين الإعلانات ما من شأنه تضليل المستهلك، وفقًا للمادتين العاشرة والحادية عشرة من نظام التجارة الإلكترونية.</p>
 <h2>24) الروابط والخدمات الخارجية</h2>
-<p>قد يشتمل التطبيق على روابط أو تكاملات مع خدمات أو مواقع أو أدوات تابعة للغير. وتكون هذه الخدمات خاضعة لشروطها وسياساتها الخاصة، ولا تتحمل المؤسسة مسؤولية محتواها أو توافرها أو ممارساتها أو آثار التعامل معها، ما لم يكن سبب الضرر راجعًا إلى خطأ من المؤسسة يوجب المسؤولية نظامًا.</p>
-
+<p>قد يشتمل التطبيق على روابط أو تكاملات مع خدمات تابعة للغير، وتكون خاضعة لشروطها وسياساتها الخاصة، ولا تتحمل المؤسسة مسؤولية محتواها أو توافرها أو آثار التعامل معها، ما لم يكن سبب الضرر راجعًا إلى خطأ من المؤسسة يوجب المسؤولية نظامًا.</p>
 <h2>25) التعديلات على الشروط</h2>
-<p>يجوز للمؤسسة تعديل هذه الشروط من وقت إلى آخر لمراعاة التطورات النظامية أو التشغيلية أو التقنية أو التجارية. وتصبح التعديلات نافذة من تاريخ نشرها أو من التاريخ المحدد فيها. ويعد استمرار المستخدم في استخدام التطبيق بعد سريان التحديث قبولًا بها.</p>
-
+<p>يجوز للمؤسسة تعديل هذه الشروط من وقت إلى آخر. وتصبح التعديلات نافذة من تاريخ نشرها أو من التاريخ المحدد فيها. ويعد استمرار المستخدم في استخدام التطبيق بعد سريان التحديث قبولًا بها.</p>
 <h2>26) النظام الواجب التطبيق والاختصاص</h2>
-<p>تخضع هذه الشروط وتفسر وفق الأنظمة المعمول بها في المملكة العربية السعودية. وتختص الجهة القضائية أو شبه القضائية المختصة في المملكة العربية السعودية بالنظر في أي نزاع ينشأ عن هذه الشروط أو عن استخدام التطبيق، ما لم يوجد نص نظامي يقضي بخلاف ذلك.</p>
-
+<p>تخضع هذه الشروط وتفسر وفق الأنظمة المعمول بها في المملكة العربية السعودية. وتختص الجهة القضائية أو شبه القضائية المختصة في المملكة بالنظر في أي نزاع ينشأ عن هذه الشروط أو عن استخدام التطبيق، ما لم يوجد نص نظامي يقضي بخلاف ذلك.</p>
 <h2>27) قابلية الفصل</h2>
-<p>إذا تبين أن أي حكم من هذه الشروط باطل أو غير قابل للتنفيذ أو غير نافذ نظامًا، فلا يؤثر ذلك في صحة بقية الأحكام، وتظل نافذة بالقدر الذي لا يتعارض مع الأنظمة المطبقة.</p>
-
+<p>إذا تبين أن أي حكم من هذه الشروط باطل أو غير قابل للتنفيذ، فلا يؤثر ذلك في صحة بقية الأحكام، وتظل نافذة بالقدر الذي لا يتعارض مع الأنظمة المطبقة.</p>
 <h2>28) التنازل</h2>
-<p>لا يجوز للمستخدم التنازل عن حقوقه أو التزاماته الناشئة عن هذه الشروط أو نقل حسابه إلى الغير دون موافقة المؤسسة. ويجوز للمؤسسة نقل حقوقها أو التزاماتها أو إسناد تشغيل التطبيق إلى جهة مرتبطة أو خلف نظامي أو مزود خدمة، بما لا يخل بحقوق المستخدم النظامية.</p>
-
+<p>لا يجوز للمستخدم التنازل عن حقوقه أو التزاماته أو نقل حسابه إلى الغير دون موافقة المؤسسة. ويجوز للمؤسسة نقل حقوقها أو التزاماتها أو إسناد تشغيل التطبيق إلى جهة مرتبطة أو خلف نظامي أو مزود خدمة، بما لا يخل بحقوق المستخدم النظامية.</p>
 <h2>29) كامل الاتفاق</h2>
-<p>تشكل هذه الشروط، مع سياسة الخصوصية وأي سياسات أو أحكام إضافية يشار إليها داخل التطبيق، كامل الاتفاق بين المستخدم والمؤسسة فيما يتعلق باستخدام التطبيق، وتحل محل ما سبقها من تفاهمات في حدود موضوعها.</p>
-
+<p>تشكل هذه الشروط، مع سياسة الخصوصية وأي سياسات إضافية يشار إليها داخل التطبيق، كامل الاتفاق بين المستخدم والمؤسسة فيما يتعلق باستخدام التطبيق، وتحل محل ما سبقها من تفاهمات في حدود موضوعها.</p>
 <h2>30) التواصل والشكاوى</h2>
-<p>للاستفسارات أو الشكاوى أو الملاحظات المتعلقة بالتطبيق أو هذه الشروط، يرجى التواصل عبر:</p>
 <div class="contact-block">
   <div>البريد الإلكتروني: <a href="mailto:zwashmi@gmail.com">zwashmi@gmail.com</a></div>
   <div>العنوان: المملكة العربية السعودية، الرياض، حي الغدير، الرمز البريدي 13311</div>
 </div>
+</div>
+
+<div class="en">
+<p class="intro">Welcome to the Provatto app. These terms govern your use of the app and its related services and features. Using the app, creating an account, or continuing to use it constitutes your acceptance of these terms, in a manner not inconsistent with the laws in force in the Kingdom of Saudi Arabia.</p>
+<h2>1) Definitions</h2>
+<ul>
+  <li><b>App or Platform:</b> the Provatto app and its interfaces, services, content, and functions.</li>
+  <li><b>The Establishment:</b> Ziad Nasser Alwashmi Trading Est., Commercial Registration No. 7053851809, the operator of the app.</li>
+  <li><b>User:</b> any natural person who uses the app or creates an account in it.</li>
+  <li><b>Digital Record:</b> the data, content, entries, events, and files associated with a particular item within the app.</li>
+  <li><b>Item:</b> the watch, piece, or product that the user records in the app.</li>
+  <li><b>Digital Record Transfer:</b> the function that lets a user request the transfer of a particular item's digital record to another user's account within the app after their consent.</li>
+</ul>
+<h2>2) Service Provider Details</h2>
+<div class="contact-block">
+  <div>Service provider: Ziad Nasser Alwashmi Trading Est.</div>
+  <div>Commercial Registration: 7053851809</div>
+  <div>Email: <a href="mailto:zwashmi@gmail.com">zwashmi@gmail.com</a></div>
+  <div>Address: Kingdom of Saudi Arabia, Riyadh, Al-Ghadeer district, postal code 13311</div>
+</div>
+<p>The Establishment thereby discloses its basic details on the electronic platform pursuant to Article 6 of the E-Commerce Law.</p>
+<h2>3) Eligibility</h2>
+<p>The user must be eighteen (Hijri) years or older and have the legal capacity necessary to act and contract, pursuant to Article 12 of the Civil Transactions Law. The Establishment may suspend or terminate any account found to have been created or used in violation of this.</p>
+<h2>4) Nature of the Service</h2>
+<p>Provatto is a technical platform that lets the user create a digital record of their watch collectibles, save and manage and update the related data, and document certain facts or events within the app such as purchase, servicing, updates, or digital-record transfer.</p>
+<p>The records, data, notifications, or outputs produced by the app do not constitute an official ownership title, an authenticity certificate, a government authentication, or a final independent proof of the validity of ownership, soundness of source, or legitimacy of acquisition.</p>
+<h2>5) No Verification of Authenticity or Source</h2>
+<p>The Establishment does not verify the authenticity of any watch, piece, component, accessory, or associated document, and provides no express or implied warranty regarding authenticity, source, description, condition, value, legitimacy, or the product being free of imitation, fraud, or forgery.</p>
+<p>All data and content displayed in the app originates from users or those they authorize, and the user alone is responsible for verifying authenticity, source, description, and the soundness of documents before any purchase, sale, exchange, or reliance on the information.</p>
+<p>No display, description, classification, record, status, or output within the app may be interpreted as a confirmation by the Establishment of the item's authenticity, ownership, value, or the soundness of its history.</p>
+<h2>6) Digital Record Transfer</h2>
+<p>The app may provide a function to record the transfer of an item's digital record from one account to another within the app, at a user's request and with the other party's consent. The user acknowledges and agrees that:</p>
+<ul>
+  <li>The purpose of this function is to document a digital acknowledgment within the platform of the transfer of the digital record, an update of the recorded holder, or proof of a fact that took place between the parties outside the platform.</li>
+  <li>This function does not by itself create a legally binding sale, gift, assignment, or transfer of ownership, and does not substitute for any legal or contractual requirements between the parties.</li>
+  <li>The conclusion of any legal act between users is subject to applicable laws, the parties' will, and the surrounding facts of each case, and the Establishment is not a party to it.</li>
+  <li>Users alone are responsible for verifying the capacity of the disposing party, the validity of ownership, the soundness of documents, the legitimacy of the disposition, the payment of any consideration, and compliance with any relevant legal or contractual requirements.</li>
+  <li>The Establishment does not guarantee the completion of any agreement between users, nor bear responsibility for disputes arising from it.</li>
+</ul>
+<p>This limitation is consistent with Articles 31, 32, and 33 of the Civil Transactions Law; therefore, the app's function should not by itself be interpreted as a disposition transferring ownership or a fully constituted contract unless the conditions for that are met outside the platform or by a separate agreement between the parties.</p>
+<h2>7) The Platform Is Not a Party to Transactions</h2>
+<p>The Establishment is not a seller, buyer, agent, or guaranteeing intermediary for any transaction between users or between them and third parties, and does not act on behalf of any party in verifying ownership, authenticity, value, or the legal soundness of items, documents, or dispositions.</p>
+<h2>8) Accounts and Registration</h2>
+<p>To use certain features, the user must create an account and provide correct, complete, and up-to-date data. The user is responsible for keeping login credentials confidential, for all activities carried out through their account unless unlawful access beyond their control is proven and they have notified the Establishment without delay, and for updating their data when it changes.</p>
+<h2>9) User Obligations and Representations</h2>
+<ul>
+  <li>All data, information, photos, and documents they upload or enter are correct and not misleading to the best of their knowledge.</li>
+  <li>They are the lawful owner of the recorded item or duly authorized to manage or dispose of its data within the app.</li>
+  <li>Their use of the app does not infringe the rights of others or any law in force in the Kingdom.</li>
+  <li>They will not upload or publish any forged or misleading data, photos, or documents, or anything that would give a false impression of authenticity, ownership, or source.</li>
+  <li>They will not use the app for fraud, impersonation, misleading others, or marketing counterfeit, fraudulent, or disputed products without proper disclosure.</li>
+  <li>They will not upload official documents or sensitive data — their own or others' — unless explicitly requested by the Establishment for a legitimate legal purpose.</li>
+  <li>They will not use others' contact data within the app unless they have a legitimate right to use it for the specified purpose of the relevant function.</li>
+</ul>
+<h2>10) User-Uploaded Content</h2>
+<p>As between the user and the Establishment, the user retains their rights to the content they upload, while granting the Establishment a non-exclusive license to store, process, display, and technically make it available to the extent necessary to operate the app, carry out its functions, improve it, and comply with the law. The user alone bears full responsibility for the content they upload, enter, or share, and for any claim arising from it.</p>
+<h2>11) Prohibited Content</h2>
+<ul>
+  <li>Uploading or circulating false or misleading data.</li>
+  <li>Impersonating others or using their data without justification.</li>
+  <li>Publishing, displaying, or promoting counterfeit, fraudulent, or forged products or incorrect documents.</li>
+  <li>Infringing intellectual property, privacy, reputation, or any other rights of others.</li>
+  <li>Attempting to hack, disrupt, or tamper with the app's systems or bypass protection measures.</li>
+  <li>Using the app for any unlawful purpose or one contrary to laws or public morals.</li>
+</ul>
+<h2>12) Accuracy of Information and Reliance</h2>
+<p>The app may contain data entered by users that may include errors, omissions, or outdated information. Therefore, the app alone may not be relied upon to make purchase, sale, valuation, financing, insurance, litigation, or any legal, financial, or commercial decisions, without independent verification of the relevant information and documents.</p>
+<h2>13) No Professional Advice or Valuation</h2>
+<p>Unless expressly stated otherwise in a separate service with its own additional terms, the app does not provide professional, legal, or technical advice, certified expertise, or an official valuation of authenticity, value, soundness, or source.</p>
+<p>Any future services — including human valuation, technical inspection, or AI analysis — if launched later, are subject to additional terms and updated policies, and do not constitute a final guarantee unless expressly stated.</p>
+<h2>14) Modifications to the Service</h2>
+<p>The Establishment may modify the app, add features, suspend or discontinue some of them, or develop them at any time, including renaming functions, changing how they work, or imposing additional requirements for their use, for operational, security, legal, or commercial reasons.</p>
+<h2>15) Fees and Paid Services</h2>
+<p>The current version of the app does not include in-app payment processing under the current operational status. If it is decided in the future to offer paid services or subscriptions, they will be subject to additional provisions setting out the price, payment mechanism, invoicing, cancellation or termination, and execution in accordance with applicable laws, including the E-Commerce Law where applicable.</p>
+<h2>16) Intellectual Property Rights</h2>
+<p>All rights related to the app — including the trade name, marks, logos, designs, interfaces, databases, content owned by the Establishment, and software — belong to the Establishment or its licensors and are protected by relevant laws. They may not be copied, modified, exploited, republished, or used to create derivative works without prior written consent, except within the limits permitted by law.</p>
+<h2>17) Privacy and Personal Data</h2>
+<p>The collection, processing, use, and disclosure of personal data is governed by the app's <a href="privacy.html" style="color:var(--teal);font-weight:600">Privacy Policy</a>, which is an integral part of these terms. In case of conflict regarding personal data, the more specific provisions of the Privacy Policy prevail within their scope.</p>
+<h2>18) Notifications and Electronic Communications</h2>
+<p>The user agrees to receive notifications and messages related to the account, security, use of the app, or material updates via the app, text messages, email, or any electronic means registered with them, in accordance with the Electronic Transactions Law and the E-Commerce Law.</p>
+<h2>19) Suspension and Termination</h2>
+<p>The Establishment may suspend the account, restrict access, or terminate use, immediately or after notice, in cases of violation of these terms, suspicion of fraudulent or misleading conduct, provision of false data, prejudice to the security of the app or users, or a legal requirement. Suspension or termination does not exempt the user from responsibilities that arose beforehand.</p>
+<h2>20) Limitation of Liability</h2>
+<p>To the maximum extent permitted by law, the Establishment is not liable for the correctness or accuracy of data entered by users, the authenticity or source or value of watches, any transaction or dispute or loss arising between users, any decisions made based on the app's data, or any interruption or technical error resulting from causes beyond control or force majeure, unless there is negligence that entails liability by law.</p>
+<p>In all cases, no exemption or limitation of liability applies to what may not be legally excluded, particularly what arises from fraud or gross error, pursuant to Article 173 of the Civil Transactions Law.</p>
+<h2>21) Indemnification</h2>
+<p>The user undertakes to indemnify, defend, and hold the Establishment harmless from any claims, damages, losses, or costs arising from their violation of these terms, their entry of false or misleading data, their claim of incorrect ownership or capacity, their infringement of the rights of others or applicable laws, or their unlawful use of the app.</p>
+<h2>22) Legal Acknowledgments on Electronic Dealing</h2>
+<p>The user acknowledges that certain actions within the app may be carried out, proven, or saved by electronic means, and that electronic records and notifications may have evidentiary weight in accordance with the Electronic Transactions Law where its conditions are met. Nonetheless, any legal effect specific to a disposition between users remains subject to the nature of the disposition and its legal conditions.</p>
+<h2>23) Advertising and Marketing Content</h2>
+<p>If the app or its marketing materials include any advertisement or description of the service, it must be interpreted within the limits of the functions actually announced. No advertisement may be understood as an undertaking of the authenticity of items, the validity of their ownership, or a guarantee of their legal transfer. The Establishment is committed to not including in advertisements anything that would mislead the consumer, pursuant to Articles 10 and 11 of the E-Commerce Law.</p>
+<h2>24) External Links and Services</h2>
+<p>The app may include links or integrations with third-party services, which are subject to their own terms and policies. The Establishment is not responsible for their content, availability, or the effects of dealing with them, unless the cause of harm is attributable to an error by the Establishment that entails liability by law.</p>
+<h2>25) Amendments to the Terms</h2>
+<p>The Establishment may amend these terms from time to time. Amendments take effect from the date of their publication or the date specified therein. The user's continued use of the app after the update takes effect constitutes acceptance of it.</p>
+<h2>26) Governing Law and Jurisdiction</h2>
+<p>These terms are governed by and interpreted in accordance with the laws in force in the Kingdom of Saudi Arabia. The competent judicial or quasi-judicial authority in the Kingdom has jurisdiction over any dispute arising from these terms or from use of the app, unless a legal provision stipulates otherwise.</p>
+<h2>27) Severability</h2>
+<p>If any provision of these terms is found to be void or unenforceable, this does not affect the validity of the remaining provisions, which remain in effect to the extent not inconsistent with applicable laws.</p>
+<h2>28) Assignment</h2>
+<p>The user may not assign their rights or obligations or transfer their account to others without the Establishment's consent. The Establishment may transfer its rights or obligations or assign the operation of the app to an affiliate, legal successor, or service provider, without prejudice to the user's legal rights.</p>
+<h2>29) Entire Agreement</h2>
+<p>These terms, together with the Privacy Policy and any additional policies referred to within the app, constitute the entire agreement between the user and the Establishment regarding use of the app, and supersede prior understandings within their scope.</p>
+<h2>30) Contact and Complaints</h2>
+<div class="contact-block">
+  <div>Email: <a href="mailto:zwashmi@gmail.com">zwashmi@gmail.com</a></div>
+  <div>Address: Kingdom of Saudi Arabia, Riyadh, Al-Ghadeer district, postal code 13311</div>
+</div>
+</div>
 
 </div>
 </main>
-
 <footer>
-  © 2026 مؤسسة زياد ناصر الوشمي للتجارة — سجل تجاري 7053851809 &nbsp;·&nbsp; <a href="privacy.html">سياسة الخصوصية</a> &nbsp;·&nbsp; <a href="support.html">الدعم</a>
+  <span class="ar-inline">© 2026 مؤسسة زياد ناصر الوشمي للتجارة — سجل تجاري 7053851809</span>
+  <span class="en-inline">© 2026 Ziad Nasser Alwashmi Trading Est. — CR 7053851809</span>
 </footer>
-
+<script>
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+    document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    try { localStorage.setItem('provatto-lang', lang); } catch(e){}
+  }
+  (function(){
+    var saved = 'ar';
+    try { saved = localStorage.getItem('provatto-lang') || 'ar'; } catch(e){}
+    setLang(saved);
+  })();
+</script>
 </body>
 </html>

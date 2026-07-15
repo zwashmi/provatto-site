@@ -8,296 +8,303 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --navy:#0A111F;
-    --teal:#12B5B0;
-    --gold:#C9A86A;
-    --ink:#1C2532;
-    --muted:#5B6676;
-    --paper:#FAFAF7;
-    --card:#FFFFFF;
-    --line:#E7E4DC;
-  }
+  :root{--navy:#0A111F;--teal:#12B5B0;--gold:#C9A86A;--ink:#1C2532;--muted:#5B6676;--paper:#FAFAF7;--card:#FFFFFF;--line:#E7E4DC;}
   *{margin:0;padding:0;box-sizing:border-box}
-  body{
-    font-family:'IBM Plex Sans Arabic',-apple-system,'Segoe UI',Tahoma,sans-serif;
-    background:var(--paper);
-    color:var(--ink);
-    line-height:1.9;
-    font-size:16px;
-  }
-  header{
-    background:var(--navy);
-    padding:2.2rem 1.5rem 2rem;
-    text-align:center;
-  }
-  .brand{
-    color:var(--gold);
-    font-size:1.5rem;
-    font-weight:700;
-    letter-spacing:.14em;
-  }
+  body{font-family:'IBM Plex Sans Arabic',-apple-system,'Segoe UI',Tahoma,sans-serif;background:var(--paper);color:var(--ink);line-height:1.9;font-size:16px;}
+  header{background:var(--navy);padding:2.2rem 1.5rem 2rem;text-align:center;}
+  .brand{color:var(--gold);font-size:1.5rem;font-weight:700;letter-spacing:.14em;}
   .brand span{color:#fff;font-weight:300}
-  .doc-title{
-    color:#fff;
-    font-size:1.35rem;
-    font-weight:600;
-    margin-top:.9rem;
-  }
-  .doc-meta{
-    color:#9AA5B5;
-    font-size:.85rem;
-    margin-top:.5rem;
-  }
+  .doc-title{color:#fff;font-size:1.35rem;font-weight:600;margin-top:.9rem;}
+  .doc-meta{color:#9AA5B5;font-size:.85rem;margin-top:.5rem;}
   .doc-meta b{color:var(--teal);font-weight:500}
-  nav.docnav{
-    background:#0E1626;
-    padding:.65rem 1rem;
-    text-align:center;
-    font-size:.88rem;
-  }
-  nav.docnav a{
-    color:#C5CDD9;
-    text-decoration:none;
-    margin:0 .9rem;
-    padding-bottom:2px;
-    border-bottom:1px solid transparent;
-  }
+  .lang-toggle{display:inline-flex;margin-top:1.3rem;border:1px solid rgba(201,168,106,.45);border-radius:999px;overflow:hidden;}
+  .lang-toggle button{background:transparent;color:#9AA5B5;border:none;font-family:inherit;font-size:.9rem;font-weight:600;padding:.4rem 1.3rem;cursor:pointer;transition:all .2s;}
+  .lang-toggle button.active{background:var(--gold);color:var(--navy);}
+  nav.docnav{background:#0E1626;padding:.65rem 1rem;text-align:center;font-size:.88rem;}
+  nav.docnav a{color:#C5CDD9;text-decoration:none;margin:0 .9rem;padding-bottom:2px;border-bottom:1px solid transparent;}
   nav.docnav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
   nav.docnav a.current{color:var(--gold)}
-  main{
-    max-width:820px;
-    margin:2.5rem auto 3.5rem;
-    padding:0 1.25rem;
-  }
-  .card{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:14px;
-    padding:2.4rem 2.2rem;
-    box-shadow:0 1px 3px rgba(10,17,31,.05);
-  }
-  .intro{
-    color:var(--muted);
-    font-size:.98rem;
-    padding-bottom:1.6rem;
-    border-bottom:1px solid var(--line);
-    margin-bottom:1.6rem;
-  }
-  h2{
-    font-size:1.08rem;
-    font-weight:700;
-    color:var(--navy);
-    margin:2rem 0 .6rem;
-    padding-right:.85rem;
-    border-right:3px solid var(--gold);
-  }
+  main{max-width:820px;margin:2.5rem auto 3.5rem;padding:0 1.25rem;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:2.4rem 2.2rem;box-shadow:0 1px 3px rgba(10,17,31,.05);}
+  .intro{color:var(--muted);font-size:.98rem;padding-bottom:1.6rem;border-bottom:1px solid var(--line);margin-bottom:1.6rem;}
+  h2{font-size:1.08rem;font-weight:700;color:var(--navy);margin:2rem 0 .6rem;padding-right:.85rem;border-right:3px solid var(--gold);}
   h2:first-of-type{margin-top:.4rem}
-  p, li{font-size:.97rem;color:var(--ink)}
+  p,li{font-size:.97rem;color:var(--ink)}
   p{margin-bottom:.7rem}
   ul{list-style:none;margin:.2rem 0 .8rem}
-  li{padding-right:1.1rem;position:relative;margin-bottom:.35rem}
-  li::before{
-    content:"";
-    position:absolute;
-    right:0;
-    top:.85em;
-    width:5px;height:5px;
-    border-radius:50%;
-    background:var(--teal);
-  }
-  .contact-block{
-    background:#F4F7F7;
-    border:1px solid #DDEAE9;
-    border-radius:10px;
-    padding:1rem 1.2rem;
-    margin:.6rem 0 .9rem;
-    font-size:.95rem;
-  }
+  li{position:relative;margin-bottom:.35rem;padding-right:1.1rem}
+  li::before{content:"";position:absolute;right:0;top:.85em;width:5px;height:5px;border-radius:50%;background:var(--teal)}
+  .contact-block{background:#F4F7F7;border:1px solid #DDEAE9;border-radius:10px;padding:1rem 1.2rem;margin:.6rem 0 .9rem;font-size:.95rem;}
   .contact-block div{margin:.15rem 0}
   .contact-block a{color:var(--teal);text-decoration:none;font-weight:600}
-  footer{
-    text-align:center;
-    color:var(--muted);
-    font-size:.82rem;
-    padding:1.5rem 1rem 2.5rem;
-  }
+  .precedence{background:#FBF6EC;border:1px solid #E7D6B0;border-radius:10px;padding:.9rem 1.1rem;margin-bottom:1.4rem;font-size:.9rem;color:#7A6636;}
+  footer{text-align:center;color:var(--muted);font-size:.82rem;padding:1.5rem 1rem 2.5rem;}
   footer a{color:var(--teal);text-decoration:none}
-  @media (max-width:600px){
-    .card{padding:1.6rem 1.2rem}
-    body{font-size:15px}
-  }
+  html[lang="en"]{direction:ltr}
+  html[lang="en"] body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif}
+  html[lang="en"] h2{padding-right:0;padding-left:.85rem;border-right:none;border-left:3px solid var(--gold)}
+  html[lang="en"] li{padding-right:0;padding-left:1.1rem}
+  html[lang="en"] li::before{right:auto;left:0}
+  .en{display:none}
+  html[lang="en"] .ar{display:none}
+  html[lang="en"] .en{display:block}
+  .ar-inline{display:inline}
+  html[lang="en"] .ar-inline{display:none}
+  .en-inline{display:none}
+  html[lang="en"] .en-inline{display:inline}
+  @media (max-width:600px){.card{padding:1.6rem 1.2rem}body{font-size:15px}}
 </style>
 </head>
 <body>
-
 <header>
   <div class="brand">PROVATTO<span> | بروفاتو</span></div>
-  <div class="doc-title">سياسة الخصوصية</div>
-  <div class="doc-meta">تاريخ السريان: <b>١٤ يوليو ٢٠٢٦م</b> &nbsp;·&nbsp; آخر تحديث: <b>١٤ يوليو ٢٠٢٦م</b></div>
+  <div class="doc-title"><span class="ar-inline">سياسة الخصوصية</span><span class="en-inline">Privacy Policy</span></div>
+  <div class="doc-meta">
+    <span class="ar-inline">تاريخ السريان: <b>١٤ يوليو ٢٠٢٦م</b> · آخر تحديث: <b>١٤ يوليو ٢٠٢٦م</b></span>
+    <span class="en-inline">Effective date: <b>14 July 2026</b> · Last updated: <b>14 July 2026</b></span>
+  </div>
+  <div class="lang-toggle">
+    <button id="btn-ar" class="active" onclick="setLang('ar')">العربية</button>
+    <button id="btn-en" onclick="setLang('en')">English</button>
+  </div>
 </header>
-
 <nav class="docnav">
-  <a href="privacy.html" class="current">سياسة الخصوصية</a>
-  <a href="terms.html">شروط الاستخدام</a>
-  <a href="support.html">الدعم</a>
+  <a href="privacy.html" class="current"><span class="ar-inline">سياسة الخصوصية</span><span class="en-inline">Privacy Policy</span></a>
+  <a href="terms.html"><span class="ar-inline">شروط الاستخدام</span><span class="en-inline">Terms of Use</span></a>
+  <a href="support.html"><span class="ar-inline">الدعم</span><span class="en-inline">Support</span></a>
 </nav>
-
 <main>
 <div class="card">
+<div class="precedence en">Note: This English text is a translation provided for convenience. The Arabic version is the authoritative reference in case of any discrepancy in interpretation.</div>
 
+<div class="ar">
 <p class="intro">هذه السياسة توضح كيفية قيام مؤسسة زياد ناصر الوشمي للتجارة، سجل تجاري رقم 7053851809، بصفتها الجهة المشغلة لتطبيق Provatto، بجمع البيانات الشخصية ومعالجتها وحفظها والإفصاح عنها وحمايتها عند استخدام التطبيق أو الخدمات المرتبطة به، وذلك وفقًا لنظام حماية البيانات الشخصية في المملكة العربية السعودية والأنظمة ذات الصلة.</p>
-
 <h2>1) من نحن</h2>
 <p>Provatto تطبيق يتيح للمستخدمين إنشاء سجل رقمي للساعات والمقتنيات ذات الصلة، وإدارة البيانات المرتبطة بها، وتوثيق بعض الوقائع والأحداث المتعلقة بها داخل التطبيق، بما في ذلك تسجيل انتقال السجل الرقمي بين الحسابات عند طلب المستخدم وموافقة الطرف الآخر.</p>
-<p>بيانات جهة التحكم:</p>
 <div class="contact-block">
   <div>الاسم التجاري: مؤسسة زياد ناصر الوشمي للتجارة</div>
   <div>السجل التجاري: 7053851809</div>
   <div>البريد الإلكتروني للتواصل: <a href="mailto:zwashmi@gmail.com">zwashmi@gmail.com</a></div>
   <div>العنوان: المملكة العربية السعودية، الرياض، حي الغدير، الرمز البريدي 13311</div>
 </div>
-
 <h2>2) نطاق هذه السياسة</h2>
 <p>تنطبق هذه السياسة على البيانات الشخصية التي نجمعها من المستخدمين عند إنشاء الحساب أو استخدام التطبيق أو التواصل معنا أو استخدام وظائف التطبيق المختلفة. كما تنطبق على البيانات التي نجمعها من الغير في الحدود التي يجيزها النظام وعند وجود مسوغ نظامي لذلك.</p>
-
 <h2>3) البيانات التي نجمعها</h2>
 <p>قد نجمع الفئات الآتية من البيانات الشخصية بحسب طبيعة الاستخدام:</p>
 <ul>
   <li><b>بيانات الحساب والتواصل:</b> الاسم، البريد الإلكتروني، رقم الجوال، المدينة، اسم المستخدم، وبيانات التحقق من الحساب.</li>
-  <li><b>بيانات السجل الرقمي للمقتنيات:</b> العلامة، الموديل، الرقم المرجعي، الرقم التسلسلي، سعر الشراء، تاريخ الشراء، الصور، الملاحظات، وسجل الأحداث المرتبط بالمقتنى مثل الشراء أو الصيانة أو النقل أو أي تحديثات أخرى يضيفها المستخدم.</li>
-  <li><b>بيانات المعاملات داخل التطبيق:</b> بيانات طلبات تسجيل انتقال السجل الرقمي، وحالة القبول أو الرفض، والوقت والتاريخ، وهوية الحسابات المعنية بالعملية داخل التطبيق.</li>
-  <li><b>البيانات التقنية:</b> عنوان بروتوكول الإنترنت، معرف الجهاز أو التطبيق، نوع الجهاز، نظام التشغيل، سجلات الدخول، أوقات الوصول، بيانات الأعطال، وسجلات الاستخدام التقنية بالقدر اللازم لتشغيل التطبيق وأمنه وتحسين أدائه.</li>
+  <li><b>بيانات السجل الرقمي للمقتنيات:</b> العلامة، الموديل، الرقم المرجعي، الرقم التسلسلي، سعر الشراء، تاريخ الشراء، الصور، الملاحظات، وسجل الأحداث المرتبط بالمقتنى.</li>
+  <li><b>بيانات المعاملات داخل التطبيق:</b> بيانات طلبات تسجيل انتقال السجل الرقمي، وحالة القبول أو الرفض، والوقت والتاريخ، وهوية الحسابات المعنية بالعملية.</li>
+  <li><b>البيانات التقنية:</b> عنوان بروتوكول الإنترنت، معرف الجهاز أو التطبيق، نوع الجهاز، نظام التشغيل، سجلات الدخول، أوقات الوصول، بيانات الأعطال، وسجلات الاستخدام التقنية بالقدر اللازم لتشغيل التطبيق وأمنه.</li>
   <li><b>بيانات التواصل والدعم:</b> أي معلومات يزودنا بها المستخدم عند التواصل معنا للاستفسار أو طلب الدعم أو تقديم شكوى أو ممارسة حقوقه النظامية.</li>
 </ul>
-
 <h2>4) طريقة جمع البيانات</h2>
-<p>نجمع البيانات بالطرق الآتية:</p>
 <ul>
   <li>مباشرة من المستخدم عند إنشاء الحساب أو تعبئة الحقول أو رفع الصور أو تحديث السجل الرقمي أو التواصل معنا.</li>
   <li>تلقائيًا عبر التطبيق والأنظمة التقنية المرتبطة به عند الاستخدام، مثل السجلات التقنية وبيانات الأعطال.</li>
-  <li>من مستخدم آخر في نطاق محدود عند استخدام وظيفة تسجيل انتقال السجل الرقمي، إذا أدخل بيانات اتصال الطرف الآخر أو اختاره من داخل النظام، وذلك في الحدود اللازمة لتنفيذ الوظيفة ووفق المسوغ النظامي المناسب.</li>
+  <li>من مستخدم آخر في نطاق محدود عند استخدام وظيفة تسجيل انتقال السجل الرقمي، في الحدود اللازمة لتنفيذ الوظيفة ووفق المسوغ النظامي المناسب.</li>
 </ul>
-
 <h2>5) الأغراض التي نعالج البيانات من أجلها</h2>
-<p>نعالج بياناتك الشخصية للأغراض الآتية:</p>
 <ul>
   <li>إنشاء الحساب وتسجيل الدخول وإدارة هوية المستخدم.</li>
   <li>تشغيل التطبيق وتمكين المستخدم من إنشاء وإدارة السجل الرقمي للمقتنيات.</li>
-  <li>تنفيذ الوظائف التي يطلبها المستخدم، بما في ذلك تسجيل الأحداث وطلبات تسجيل انتقال السجل الرقمي بين الحسابات.</li>
+  <li>تنفيذ الوظائف التي يطلبها المستخدم، بما في ذلك تسجيل الأحداث وطلبات تسجيل انتقال السجل الرقمي.</li>
   <li>التحقق من أمن الحسابات ومنع إساءة الاستخدام أو الاحتيال أو الوصول غير المشروع.</li>
   <li>تقديم الدعم الفني وخدمة العملاء ومعالجة الشكاوى والطلبات.</li>
-  <li>تطوير التطبيق وتحسين الأداء وتجربة المستخدم والخصائص التقنية.</li>
+  <li>تطوير التطبيق وتحسين الأداء وتجربة المستخدم.</li>
   <li>الامتثال للالتزامات النظامية والطلبات الصادرة من الجهات المختصة.</li>
   <li>إرسال الإشعارات التشغيلية المتعلقة بالحساب أو الخدمة أو الأمان أو التحديثات الجوهرية.</li>
   <li>إرسال مواد تسويقية أو ترويجية فقط في الأحوال التي يجيزها النظام وبعد الحصول على الموافقة عندما تكون مطلوبة نظامًا.</li>
 </ul>
-
 <h2>6) الأساس النظامي لمعالجة البيانات</h2>
-<p>نقوم بمعالجة البيانات الشخصية استنادًا إلى واحد أو أكثر من المسوغات الآتية بحسب الحالة:</p>
 <ul>
   <li>موافقة صاحب البيانات الشخصية، عندما تكون الموافقة مطلوبة وفقًا لنظام حماية البيانات الشخصية.</li>
-  <li>تنفيذ اتفاق يكون صاحب البيانات طرفًا فيه، أو اتخاذ خطوات سابقة على التعاقد بناءً على طلبه، وذلك مثل إنشاء الحساب وتقديم الخدمة المطلوبة داخل التطبيق، وفقًا للمادة السادسة من نظام حماية البيانات الشخصية.</li>
-  <li>تحقيق مصلحة مشروعة لجهة التحكم، ما لم يخل ذلك بحقوق صاحب البيانات أو يتعارض مع مصالحه ولم تكن البيانات حساسة، وذلك في الحدود التي يجيزها النظام ووفقًا للمادة العاشرة والمادة الخامسة عشرة من نظام حماية البيانات الشخصية.</li>
+  <li>تنفيذ اتفاق يكون صاحب البيانات طرفًا فيه، أو اتخاذ خطوات سابقة على التعاقد بناءً على طلبه، وفقًا للمادة السادسة من النظام.</li>
+  <li>تحقيق مصلحة مشروعة لجهة التحكم، ما لم يخل ذلك بحقوق صاحب البيانات، وفقًا للمادتين العاشرة والخامسة عشرة من النظام.</li>
   <li>الامتثال لالتزام نظامي أو طلب صادر من جهة مختصة.</li>
 </ul>
-
 <h2>7) الحد الأدنى من البيانات</h2>
-<p>نلتزم بأن يكون محتوى البيانات الشخصية ملائمًا ومقصورًا على الحد الأدنى اللازم لتحقيق الغرض من جمعها ومعالجتها، وفقًا للمادة الحادية عشرة من نظام حماية البيانات الشخصية. ولذلك قد تكون بعض الحقول اختيارية، وقد نمتنع عن جمع بيانات لا تكون لازمة لتقديم الخدمة.</p>
-
+<p>نلتزم بأن يكون محتوى البيانات الشخصية ملائمًا ومقصورًا على الحد الأدنى اللازم لتحقيق الغرض من جمعها ومعالجتها، وفقًا للمادة الحادية عشرة من نظام حماية البيانات الشخصية.</p>
 <h2>8) دقة البيانات</h2>
-<p>يجب على المستخدم تزويدنا ببيانات صحيحة ودقيقة ومحدثة. ونقوم باتخاذ الخطوات المعقولة للتحقق من دقة البيانات واكتمالها وحداثتها وارتباطها بالغرض الذي جمعت من أجله، وفقًا للمادة الرابعة عشرة من نظام حماية البيانات الشخصية.</p>
-
+<p>يجب على المستخدم تزويدنا ببيانات صحيحة ودقيقة ومحدثة. ونقوم باتخاذ الخطوات المعقولة للتحقق من دقة البيانات، وفقًا للمادة الرابعة عشرة من النظام.</p>
 <h2>9) الإفصاح عن البيانات الشخصية</h2>
-<p>لا نفصح عن بياناتك الشخصية إلا في الأحوال الآتية:</p>
 <ul>
-  <li>لمزودي الخدمات التقنية الذين يعالجون البيانات نيابة عنا لتشغيل التطبيق أو استضافته أو دعمه الفني، وذلك في حدود الحاجة وبما يتفق مع المادة الثامنة من نظام حماية البيانات الشخصية.</li>
-  <li>للطرف الآخر في عملية تسجيل انتقال السجل الرقمي، وذلك بالقدر اللازم لتنفيذ الوظيفة داخل التطبيق.</li>
+  <li>لمزودي الخدمات التقنية الذين يعالجون البيانات نيابة عنا لتشغيل التطبيق أو استضافته أو دعمه الفني، وفقًا للمادة الثامنة من النظام.</li>
+  <li>للطرف الآخر في عملية تسجيل انتقال السجل الرقمي، بالقدر اللازم لتنفيذ الوظيفة.</li>
   <li>إذا طلبت ذلك أو وافقت عليه وفقًا للنظام.</li>
   <li>إذا كان الإفصاح لازمًا امتثالًا لالتزام نظامي أو طلب صادر من جهة مختصة.</li>
-  <li>إذا كان الإفصاح ضروريًا لحماية حقوقنا النظامية أو أمن التطبيق أو المستخدمين أو للتحقق من المخالفات أو منع الاحتيال، في الحدود التي يجيزها النظام.</li>
+  <li>إذا كان الإفصاح ضروريًا لحماية حقوقنا النظامية أو أمن التطبيق أو المستخدمين أو منع الاحتيال، في الحدود التي يجيزها النظام.</li>
 </ul>
 <p>ولا نبيع البيانات الشخصية للغير، ولا نفصح عنها لأغراض غير مصرح بها أو غير مسموح بها نظامًا.</p>
-
 <h2>10) نقل البيانات خارج المملكة</h2>
-<p>قد تتم استضافة بعض البيانات الشخصية أو معالجتها داخل المملكة العربية السعودية أو خارجها من خلال مزودي خدمات تقنيين نتعاقد معهم لتشغيل التطبيق. وإذا جرى نقل البيانات الشخصية إلى خارج المملكة أو الإفصاح عنها لجهة خارج المملكة، فإن ذلك يتم وفقًا للمادة التاسعة والعشرين من نظام حماية البيانات الشخصية، وبما يشمل ما يلي:</p>
-<ul>
-  <li>أن يكون النقل أو الإفصاح لغرض مشروع ومحدد ومتصلاً بتقديم الخدمة أو تشغيلها.</li>
-  <li>ألا يترتب على النقل أو الإفصاح مساس بالأمن الوطني أو بمصالح المملكة الحيوية.</li>
-  <li>أن يتوافر مستوى مناسب لحماية البيانات الشخصية خارج المملكة بما لا يقل عن مستوى الحماية المقرر في النظام.</li>
-  <li>أن يقتصر النقل أو الإفصاح على الحد الأدنى من البيانات اللازمة.</li>
-  <li>أن تتخذ التدابير التعاقدية والتنظيمية والتقنية المناسبة مع جهة المعالجة أو الجهة المستقبلة.</li>
-</ul>
-
+<p>قد تتم استضافة بعض البيانات أو معالجتها داخل المملكة أو خارجها من خلال مزودي خدمات تقنيين. وإذا جرى نقل البيانات إلى خارج المملكة، فإن ذلك يتم وفقًا للمادة التاسعة والعشرين من النظام، بما يشمل: أن يكون النقل لغرض مشروع ومحدد؛ وألا يمس الأمن الوطني أو مصالح المملكة الحيوية؛ وأن يتوافر مستوى مناسب للحماية؛ وأن يقتصر على الحد الأدنى اللازم؛ وأن تتخذ التدابير التعاقدية والتنظيمية والتقنية المناسبة.</p>
 <h2>11) مزودو المعالجة والخدمات التقنية</h2>
-<p>قد نستعين بجهات معالجة أو مزودي خدمات لتقديم خدمات الاستضافة السحابية أو قواعد البيانات أو التحليلات التقنية أو دعم البنية التحتية. وفي جميع الأحوال، نلتزم باختيار الجهات التي توفر الضمانات اللازمة للتحقق من التزامها بأحكام النظام واللوائح، وفقًا للمادة الثامنة من نظام حماية البيانات الشخصية، دون أن يخل ذلك بمسؤوليتنا تجاه أصحاب البيانات.</p>
-
+<p>قد نستعين بجهات معالجة أو مزودي خدمات للاستضافة السحابية أو قواعد البيانات أو دعم البنية التحتية. ونلتزم باختيار الجهات التي توفر الضمانات اللازمة، وفقًا للمادة الثامنة من النظام، دون أن يخل ذلك بمسؤوليتنا تجاه أصحاب البيانات.</p>
 <h2>12) الاحتفاظ بالبيانات</h2>
-<p>نحتفظ بالبيانات الشخصية طوال المدة اللازمة لتحقيق الأغراض المبينة في هذه السياسة، وبخاصة طوال مدة نشاط الحساب أو الحاجة التشغيلية أو النظامية أو التعاقدية لها. وعند انتهاء الغرض من جمع البيانات، نقوم بإتلافها دون تأخير غير مبرر وفقًا للمادة الثامنة عشرة من نظام حماية البيانات الشخصية، ما لم يوجد مسوغ نظامي للاحتفاظ بها مدة أطول، أو كانت متصلة بنزاع قائم أو إجراء قضائي أو التزام نظامي.</p>
-<p>وعند طلب حذف الحساب، نسعى عادة إلى تنفيذ الحذف خلال مدة لا تتجاوز 30 يومًا، ما لم يكن الاحتفاظ ببعض البيانات لازمًا نظامًا أو تقنيًا أو بسبب نزاع قائم أو لأغراض أمنية مشروعة.</p>
-
+<p>نحتفظ بالبيانات طوال المدة اللازمة لتحقيق الأغراض المبينة، وعند انتهاء الغرض نقوم بإتلافها دون تأخير غير مبرر وفقًا للمادة الثامنة عشرة من النظام، ما لم يوجد مسوغ نظامي للاحتفاظ. وعند طلب حذف الحساب، نسعى لتنفيذ الحذف خلال مدة لا تتجاوز 30 يومًا، ما لم يكن الاحتفاظ لازمًا نظامًا أو تقنيًا أو بسبب نزاع قائم.</p>
 <h2>13) كيفية إتلاف البيانات</h2>
-<p>عند انتهاء الحاجة إلى البيانات، نتخذ الإجراءات المناسبة لإتلافها أو إزالة ما يؤدي إلى معرفة صاحبها على وجه التحديد، بحسب طبيعة البيانات ووسيلة حفظها، وبما يمنع الوصول غير المشروع إليها أو استعادتها.</p>
-
+<p>عند انتهاء الحاجة إلى البيانات، نتخذ الإجراءات المناسبة لإتلافها أو إزالة ما يؤدي إلى معرفة صاحبها، بما يمنع الوصول غير المشروع إليها أو استعادتها.</p>
 <h2>14) حماية البيانات وأمنها</h2>
-<p>نتخذ تدابير تنظيمية وإدارية وتقنية مناسبة للمحافظة على البيانات الشخصية وحمايتها من الفقد أو الإساءة أو الوصول غير المصرح به أو التعديل أو الإفصاح غير المشروع، وفقًا للمادة التاسعة عشرة من نظام حماية البيانات الشخصية. وتشمل هذه التدابير -بحسب ما يلزم- التحكم في الصلاحيات، وحماية الحسابات، والتشفير أو التدابير المكافئة، ومراقبة الوصول، وإدارة الحوادث الأمنية.</p>
-
+<p>نتخذ تدابير تنظيمية وإدارية وتقنية مناسبة لحماية البيانات من الفقد أو الإساءة أو الوصول غير المصرح به أو التعديل أو الإفصاح غير المشروع، وفقًا للمادة التاسعة عشرة من النظام، بما في ذلك التحكم في الصلاحيات وحماية الحسابات والتشفير ومراقبة الوصول وإدارة الحوادث الأمنية.</p>
 <h2>15) الإخطار بالحوادث الأمنية</h2>
-<p>إذا علمنا بوقوع تسرب لبيانات شخصية أو تلفها أو وصول غير مشروع إليها بما قد يترتب عليه ضرر أو مساس بحقوق صاحب البيانات أو مصالحه، فسنتعامل مع ذلك وفقًا للمادة العشرين من نظام حماية البيانات الشخصية، بما في ذلك الإشعار اللازم للجهة المختصة أو لصاحب البيانات متى وجب ذلك نظامًا.</p>
-
+<p>إذا علمنا بوقوع تسرب أو تلف أو وصول غير مشروع للبيانات بما قد يترتب عليه ضرر، فسنتعامل مع ذلك وفقًا للمادة العشرين من النظام، بما في ذلك الإشعار اللازم للجهة المختصة أو لصاحب البيانات متى وجب ذلك نظامًا.</p>
 <h2>16) حقوق صاحب البيانات الشخصية</h2>
-<p>وفقًا لنظام حماية البيانات الشخصية، يتمتع صاحب البيانات -بحسب الضوابط النظامية- بالحقوق الآتية:</p>
 <ul>
   <li>الحق في العلم بالمسوغ النظامي لجمع بياناته والغرض من جمعها.</li>
   <li>الحق في الوصول إلى بياناته الشخصية المتوافرة لدينا.</li>
-  <li>الحق في طلب الحصول على بياناته الشخصية بصيغة مقروءة وواضحة متى كان ذلك ممكنًا نظامًا.</li>
+  <li>الحق في طلب الحصول على بياناته بصيغة مقروءة وواضحة متى كان ذلك ممكنًا نظامًا.</li>
   <li>الحق في طلب تصحيح البيانات أو إتمامها أو تحديثها.</li>
-  <li>الحق في طلب إتلاف البيانات التي انتهت الحاجة إليها، وذلك دون إخلال بالحالات التي يجيز فيها النظام الاحتفاظ بها.</li>
-  <li>الحق في الرجوع عن الموافقة في الأحوال التي تكون المعالجة فيها قائمة على الموافقة، وذلك دون أن يؤثر ذلك على مشروعية المعالجة السابقة للرجوع.</li>
+  <li>الحق في طلب إتلاف البيانات التي انتهت الحاجة إليها، دون إخلال بحالات الاحتفاظ النظامية.</li>
+  <li>الحق في الرجوع عن الموافقة، دون أن يؤثر ذلك على مشروعية المعالجة السابقة.</li>
   <li>الحق في التقدم بشكوى إلى الجهة المختصة إذا لم تتم معالجة طلبه وفق النظام.</li>
 </ul>
-
 <h2>17) كيفية ممارسة الحقوق</h2>
-<p>يمكنك ممارسة حقوقك أو تقديم طلب متعلق ببياناتك الشخصية أو الاستفسار عنها عبر:</p>
-<div class="contact-block">
-  <div>البريد الإلكتروني: <a href="mailto:zwashmi@gmail.com">zwashmi@gmail.com</a></div>
-</div>
-<p>وسنبذل العناية للاستجابة للطلبات خلال المدة النظامية وعبر وسيلة مناسبة وفقًا للمادة الحادية والعشرين من نظام حماية البيانات الشخصية، مع مراعاة ما قد يرد على بعض الطلبات من قيود أو استثناءات نظامية.</p>
-
+<div class="contact-block"><div>البريد الإلكتروني: <a href="mailto:zwashmi@gmail.com">zwashmi@gmail.com</a></div></div>
+<p>وسنبذل العناية للاستجابة للطلبات خلال المدة النظامية، وفقًا للمادة الحادية والعشرين من النظام، مع مراعاة ما قد يرد على بعض الطلبات من قيود أو استثناءات نظامية.</p>
 <h2>18) التسويق والرسائل</h2>
-<p>لا نستخدم بيانات الاتصال الخاصة بك لإرسال مواد دعائية أو تسويقية إلا بعد الحصول على الموافقة عندما تكون مطلوبة نظامًا، وفقًا للمادتين الخامسة والعشرين والسادسة والعشرين من نظام حماية البيانات الشخصية. كما نتيح وسيلة واضحة لطلب التوقف عن إرسال هذه الرسائل في أي وقت.</p>
-
+<p>لا نستخدم بيانات الاتصال الخاصة بك لإرسال مواد تسويقية إلا بعد الحصول على الموافقة عندما تكون مطلوبة نظامًا، وفقًا للمادتين الخامسة والعشرين والسادسة والعشرين من النظام. كما نتيح وسيلة واضحة لطلب التوقف في أي وقت.</p>
 <h2>19) القُصّر</h2>
-<p>التطبيق مخصص لمن أتم ثماني عشرة سنة هجرية فأكثر. ولا نقبل عن علم إنشاء حسابات لمن هم دون هذا السن. وإذا تبين لنا أن بيانات قد جُمعت من شخص دون السن المسموح به خلافًا للشروط، جاز لنا تعليق الحساب أو إغلاقه واتخاذ ما يلزم بشأن البيانات وفق النظام.</p>
-
+<p>التطبيق مخصص لمن أتم ثماني عشرة سنة هجرية فأكثر. ولا نقبل عن علم إنشاء حسابات لمن هم دون هذا السن، وإذا تبين خلاف ذلك جاز لنا تعليق الحساب أو إغلاقه واتخاذ ما يلزم وفق النظام.</p>
 <h2>20) الوثائق الرسمية والبيانات الحساسة</h2>
-<p>لا نطلب عادة رفع أو إرسال نسخ من الوثائق الرسمية التي تحدد هوية الشخص، مثل الهوية الوطنية أو الإقامة أو جواز السفر، ولا يجوز للمستخدم رفعها إلا إذا طلبنا ذلك صراحة لسبب نظامي مشروع. كما لا يُفترض بالتطبيق جمع بيانات حساسة، ويجب على المستخدم الامتناع عن إدخال أو رفع أي بيانات حساسة أو وثائق رسمية أو بيانات تخص الغير دون مسوغ نظامي.</p>
-
+<p>لا نطلب عادة رفع الوثائق الرسمية التي تحدد الهوية، ولا يجوز للمستخدم رفعها إلا إذا طلبنا ذلك صراحة لسبب نظامي مشروع. ولا يُفترض بالتطبيق جمع بيانات حساسة، ويجب على المستخدم الامتناع عن إدخال أي بيانات حساسة أو وثائق رسمية أو بيانات تخص الغير دون مسوغ نظامي.</p>
 <h2>21) بيانات الغير التي يقدمها المستخدم</h2>
-<p>إذا زودنا المستخدم ببيانات تخص شخصًا آخر -مثل بيانات الطرف الآخر في طلب تسجيل انتقال السجل الرقمي- فيجب أن يكون مخولًا نظامًا بإدخالها وأن يكون استخدامها لازمًا لغرض مشروع ومحدد داخل التطبيق. ويظل المستخدم مسؤولًا عن صحة هذا الإجراء وعن عدم إساءة استخدام بيانات الغير.</p>
-
+<p>إذا زودنا المستخدم ببيانات تخص شخصًا آخر، فيجب أن يكون مخولًا نظامًا بإدخالها وأن يكون استخدامها لازمًا لغرض مشروع ومحدد. ويظل المستخدم مسؤولًا عن صحة هذا الإجراء وعن عدم إساءة استخدام بيانات الغير.</p>
 <h2>22) ملفات السجل والبيانات التقنية</h2>
-<p>قد نستخدم السجلات التقنية وبيانات الاستخدام المحدودة لأغراض التشغيل والحماية وتحليل الأعطال وقياس الأداء وتحسين الخدمة. ولا تستخدم هذه البيانات لغرض لا يتصل بتشغيل الخدمة أو أمنها أو تطويرها إلا وفق المسوغ النظامي المناسب.</p>
-
+<p>قد نستخدم السجلات التقنية وبيانات الاستخدام المحدودة لأغراض التشغيل والحماية وتحليل الأعطال وقياس الأداء وتحسين الخدمة، ولا تستخدم لغرض لا يتصل بذلك إلا وفق المسوغ النظامي المناسب.</p>
 <h2>23) التعديلات على هذه السياسة</h2>
-<p>يجوز لنا تعديل هذه السياسة من وقت إلى آخر لمواكبة التطورات النظامية أو التشغيلية أو التقنية. وعند إجراء تعديلات جوهرية سنقوم بإشعار المستخدمين بالوسيلة المناسبة داخل التطبيق أو عبر وسائل التواصل المسجلة لدينا. ويعد استمرار استخدام التطبيق بعد سريان التحديثات قبولًا بها في حدود ما يجيزه النظام.</p>
-
+<p>يجوز لنا تعديل هذه السياسة من وقت إلى آخر. وعند إجراء تعديلات جوهرية سنقوم بإشعار المستخدمين بالوسيلة المناسبة. ويعد استمرار استخدام التطبيق بعد سريان التحديثات قبولًا بها في حدود ما يجيزه النظام.</p>
 <h2>24) اللغة المعتمدة</h2>
 <p>حررت هذه السياسة باللغة العربية، وتكون هي المرجع عند الاختلاف في التفسير، ما لم ننشر نسخة أخرى معتمدة وننص على خلاف ذلك.</p>
-
 <h2>25) التواصل معنا</h2>
-<p>للاستفسارات المتعلقة بسياسة الخصوصية أو معالجة البيانات الشخصية أو لممارسة الحقوق النظامية، يرجى التواصل عبر:</p>
 <div class="contact-block">
   <div>البريد الإلكتروني: <a href="mailto:zwashmi@gmail.com">zwashmi@gmail.com</a></div>
   <div>العنوان: المملكة العربية السعودية، الرياض، حي الغدير، الرمز البريدي 13311</div>
 </div>
+</div>
+
+<div class="en">
+<p class="intro">This policy explains how Ziad Nasser Alwashmi Trading Est. (Commercial Registration No. 7053851809), as the operator of the Provatto app, collects, processes, stores, discloses, and protects personal data when you use the app or its related services, in accordance with the Personal Data Protection Law of the Kingdom of Saudi Arabia and related regulations.</p>
+<h2>1) Who We Are</h2>
+<p>Provatto is an app that lets users create a digital record for watches and related collectibles, manage the associated data, and document certain facts and events within the app — including recording the transfer of a digital record between accounts at a user's request and with the other party's consent.</p>
+<div class="contact-block">
+  <div>Business name: Ziad Nasser Alwashmi Trading Est.</div>
+  <div>Commercial Registration: 7053851809</div>
+  <div>Contact email: <a href="mailto:zwashmi@gmail.com">zwashmi@gmail.com</a></div>
+  <div>Address: Kingdom of Saudi Arabia, Riyadh, Al-Ghadeer district, postal code 13311</div>
+</div>
+<h2>2) Scope of This Policy</h2>
+<p>This policy applies to the personal data we collect from users when creating an account, using the app, contacting us, or using the app's various functions. It also applies to data we collect from third parties within the limits permitted by law and where a legal basis exists.</p>
+<h2>3) Data We Collect</h2>
+<ul>
+  <li><b>Account and contact data:</b> name, email, mobile number, city, username, and account verification data.</li>
+  <li><b>Collectible digital record data:</b> brand, model, reference number, serial number, purchase price, purchase date, photos, notes, and the event log associated with the item.</li>
+  <li><b>In-app transaction data:</b> digital-record transfer request data, acceptance or rejection status, time and date, and the identity of the accounts involved.</li>
+  <li><b>Technical data:</b> IP address, device or app identifier, device type, operating system, access logs, access times, crash data, and technical usage logs necessary to operate and secure the app.</li>
+  <li><b>Communication and support data:</b> any information the user provides when contacting us for inquiries, support, complaints, or to exercise their statutory rights.</li>
+</ul>
+<h2>4) How We Collect Data</h2>
+<ul>
+  <li>Directly from the user when creating an account, filling in fields, uploading photos, updating a digital record, or contacting us.</li>
+  <li>Automatically through the app and its related technical systems during use, such as technical logs and crash data.</li>
+  <li>From another user, in a limited scope, when using the digital-record transfer function, within the limits necessary to carry out the function and per the appropriate legal basis.</li>
+</ul>
+<h2>5) Purposes of Processing</h2>
+<ul>
+  <li>Creating an account, signing in, and managing user identity.</li>
+  <li>Operating the app and enabling users to create and manage a digital record of their collectibles.</li>
+  <li>Carrying out functions requested by the user, including logging events and digital-record transfer requests.</li>
+  <li>Verifying account security and preventing misuse, fraud, or unauthorized access.</li>
+  <li>Providing technical support and customer service and handling complaints and requests.</li>
+  <li>Developing the app and improving performance and user experience.</li>
+  <li>Complying with legal obligations and requests from competent authorities.</li>
+  <li>Sending operational notifications related to the account, service, security, or material updates.</li>
+  <li>Sending marketing materials only where permitted by law and after obtaining consent where legally required.</li>
+</ul>
+<h2>6) Legal Basis for Processing</h2>
+<ul>
+  <li>The consent of the data subject, where required under the Personal Data Protection Law.</li>
+  <li>Performance of an agreement to which the data subject is a party, or pre-contractual steps at their request, pursuant to Article 6 of the Law.</li>
+  <li>The legitimate interest of the controller, provided it does not prejudice the data subject's rights and the data is not sensitive, pursuant to Articles 10 and 15 of the Law.</li>
+  <li>Compliance with a legal obligation or a request from a competent authority.</li>
+</ul>
+<h2>7) Data Minimization</h2>
+<p>We ensure that personal data is adequate and limited to the minimum necessary to achieve the purpose of its collection and processing, pursuant to Article 11 of the Personal Data Protection Law.</p>
+<h2>8) Data Accuracy</h2>
+<p>The user must provide correct, accurate, and up-to-date data. We take reasonable steps to verify data accuracy, pursuant to Article 14 of the Law.</p>
+<h2>9) Disclosure of Personal Data</h2>
+<ul>
+  <li>To technical service providers who process data on our behalf to operate, host, or technically support the app, per Article 8 of the Law.</li>
+  <li>To the other party in a digital-record transfer process, to the extent necessary to carry out the function.</li>
+  <li>If you request or consent to it in accordance with the law.</li>
+  <li>Where necessary to comply with a legal obligation or a request from a competent authority.</li>
+  <li>Where necessary to protect our legal rights, the security of the app or users, or to prevent fraud, within legal limits.</li>
+</ul>
+<p>We do not sell personal data to third parties, nor disclose it for unauthorized or legally impermissible purposes.</p>
+<h2>10) Transfer of Data Outside the Kingdom</h2>
+<p>Some personal data may be hosted or processed inside or outside the Kingdom through technical service providers. If data is transferred outside the Kingdom, this is done in accordance with Article 29 of the Law, including: the transfer being for a legitimate, specific purpose; not prejudicing national security or the Kingdom's vital interests; an adequate level of protection being available; the transfer being limited to the minimum necessary; and appropriate contractual, organizational, and technical measures being taken.</p>
+<h2>11) Processors and Technical Service Providers</h2>
+<p>We may engage processors or service providers for cloud hosting, database, or infrastructure support. We select entities that provide the necessary guarantees, pursuant to Article 8 of the Law, without prejudice to our responsibility toward data subjects.</p>
+<h2>12) Data Retention</h2>
+<p>We retain personal data for as long as necessary to achieve the stated purposes, and when the purpose ends we destroy it without undue delay pursuant to Article 18 of the Law, unless there is a legal basis for retention. Upon an account deletion request, we generally seek to carry out deletion within 30 days, unless retention is legally or technically necessary or due to an existing dispute.</p>
+<h2>13) How Data Is Destroyed</h2>
+<p>When data is no longer needed, we take appropriate measures to destroy it or remove what would specifically identify its owner, in a way that prevents unlawful access or recovery.</p>
+<h2>14) Data Protection and Security</h2>
+<p>We take appropriate organizational, administrative, and technical measures to protect data from loss, misuse, unauthorized access, alteration, or unlawful disclosure, pursuant to Article 19 of the Law, including access controls, account protection, encryption, access monitoring, and security incident management.</p>
+<h2>15) Notification of Security Incidents</h2>
+<p>If we become aware of a leak, damage, or unlawful access to data that may cause harm, we will handle it in accordance with Article 20 of the Law, including the necessary notification to the competent authority or the data subject where legally required.</p>
+<h2>16) Rights of the Data Subject</h2>
+<ul>
+  <li>The right to be informed of the legal basis and purpose for collecting their data.</li>
+  <li>The right to access their personal data held by us.</li>
+  <li>The right to request their data in a readable, clear format where legally possible.</li>
+  <li>The right to request correction, completion, or updating of the data.</li>
+  <li>The right to request destruction of data no longer needed, without prejudice to statutory retention cases.</li>
+  <li>The right to withdraw consent, without affecting the lawfulness of prior processing.</li>
+  <li>The right to file a complaint with the competent authority if their request is not handled per the law.</li>
+</ul>
+<h2>17) How to Exercise Rights</h2>
+<div class="contact-block"><div>Email: <a href="mailto:zwashmi@gmail.com">zwashmi@gmail.com</a></div></div>
+<p>We will exercise due care to respond within the statutory period, pursuant to Article 21 of the Law, taking into account any legal restrictions or exceptions.</p>
+<h2>18) Marketing and Messages</h2>
+<p>We do not use your contact data to send marketing materials except after obtaining consent where legally required, pursuant to Articles 25 and 26 of the Law. We also provide a clear means to stop these messages at any time.</p>
+<h2>19) Minors</h2>
+<p>The app is intended for those who are eighteen (Hijri) years or older. We do not knowingly allow accounts for those under this age, and if it becomes clear otherwise we may suspend or close the account and take necessary action per the law.</p>
+<h2>20) Official Documents and Sensitive Data</h2>
+<p>We do not normally request the uploading of official identity documents, and the user may not upload them unless we explicitly request so for a legitimate legal reason. The app is not intended to collect sensitive data, and the user must refrain from entering any sensitive data, official documents, or third-party data without a legal basis.</p>
+<h2>21) Third-Party Data Provided by the User</h2>
+<p>If the user provides data relating to another person, they must be legally authorized to enter it, and its use must be necessary for a legitimate, specific purpose. The user remains responsible for the correctness of this action and for not misusing third-party data.</p>
+<h2>22) Log Files and Technical Data</h2>
+<p>We may use technical logs and limited usage data for operation, protection, crash analysis, performance measurement, and service improvement, and it is not used for any unrelated purpose except under the appropriate legal basis.</p>
+<h2>23) Amendments to This Policy</h2>
+<p>We may amend this policy from time to time. When making material amendments, we will notify users by an appropriate means. Continued use of the app after updates take effect constitutes acceptance within the limits permitted by law.</p>
+<h2>24) Governing Language</h2>
+<p>This policy was drafted in Arabic, which is the reference in case of any difference in interpretation, unless we publish another approved version and stipulate otherwise.</p>
+<h2>25) Contact Us</h2>
+<div class="contact-block">
+  <div>Email: <a href="mailto:zwashmi@gmail.com">zwashmi@gmail.com</a></div>
+  <div>Address: Kingdom of Saudi Arabia, Riyadh, Al-Ghadeer district, postal code 13311</div>
+</div>
+</div>
 
 </div>
 </main>
-
 <footer>
-  © 2026 مؤسسة زياد ناصر الوشمي للتجارة — سجل تجاري 7053851809 &nbsp;·&nbsp; <a href="terms.html">شروط الاستخدام</a> &nbsp;·&nbsp; <a href="support.html">الدعم</a>
+  <span class="ar-inline">© 2026 مؤسسة زياد ناصر الوشمي للتجارة — سجل تجاري 7053851809</span>
+  <span class="en-inline">© 2026 Ziad Nasser Alwashmi Trading Est. — CR 7053851809</span>
 </footer>
-
+<script>
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+    document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    try { localStorage.setItem('provatto-lang', lang); } catch(e){}
+  }
+  (function(){
+    var saved = 'ar';
+    try { saved = localStorage.getItem('provatto-lang') || 'ar'; } catch(e){}
+    setLang(saved);
+  })();
+</script>
 </body>
 </html>

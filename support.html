@@ -1,101 +1,152 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الدعم الفني | Provatto Support</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Arial, sans-serif;
-      background: #0a1117;
-      color: #e8edf0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 48px 24px;
-      line-height: 1.8;
-    }
-    .logo {
-      font-size: 44px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
-    .logo .accent { color: #4db6a5; }
-    .tagline {
-      color: #7a8a94;
-      font-size: 13px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      margin-bottom: 48px;
-    }
-    .card {
-      background: #101b23;
-      border: 1px solid #1e2f3a;
-      border-radius: 16px;
-      padding: 36px;
-      max-width: 560px;
-      width: 100%;
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-size: 24px;
-      margin-bottom: 16px;
-      color: #ffffff;
-    }
-    h2 {
-      font-size: 18px;
-      margin-bottom: 12px;
-      color: #4db6a5;
-    }
-    p { color: #b8c4cc; margin-bottom: 16px; }
-    .email-btn {
-      display: inline-block;
-      background: #4db6a5;
-      color: #0a1117;
-      font-weight: 700;
-      font-size: 16px;
-      padding: 14px 32px;
-      border-radius: 12px;
-      text-decoration: none;
-      margin-top: 8px;
-    }
-    .email-btn:hover { background: #5fc9b8; }
-    .divider {
-      border: none;
-      border-top: 1px solid #1e2f3a;
-      margin: 32px 0;
-    }
-    .en { direction: ltr; text-align: left; }
-    .note { font-size: 13px; color: #7a8a94; margin-top: 24px; text-align: center; max-width: 560px; }
-    a.plain { color: #4db6a5; text-decoration: none; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدعم — Provatto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0A111F;--teal:#12B5B0;--gold:#C9A86A;--ink:#1C2532;--muted:#5B6676;--paper:#FAFAF7;--card:#FFFFFF;--line:#E7E4DC;}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'IBM Plex Sans Arabic',-apple-system,'Segoe UI',Tahoma,sans-serif;background:var(--paper);color:var(--ink);line-height:1.9;font-size:16px;}
+  header{background:var(--navy);padding:2.2rem 1.5rem 2rem;text-align:center;}
+  .brand{color:var(--gold);font-size:1.5rem;font-weight:700;letter-spacing:.14em;}
+  .brand span{color:#fff;font-weight:300}
+  .doc-title{color:#fff;font-size:1.35rem;font-weight:600;margin-top:.9rem;}
+  .lang-toggle{display:inline-flex;margin-top:1.3rem;border:1px solid rgba(201,168,106,.45);border-radius:999px;overflow:hidden;}
+  .lang-toggle button{background:transparent;color:#9AA5B5;border:none;font-family:inherit;font-size:.9rem;font-weight:600;padding:.4rem 1.3rem;cursor:pointer;transition:all .2s;}
+  .lang-toggle button.active{background:var(--gold);color:var(--navy);}
+  nav.docnav{background:#0E1626;padding:.65rem 1rem;text-align:center;font-size:.88rem;}
+  nav.docnav a{color:#C5CDD9;text-decoration:none;margin:0 .9rem;padding-bottom:2px;border-bottom:1px solid transparent;}
+  nav.docnav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+  nav.docnav a.current{color:var(--gold)}
+  main{max-width:760px;margin:2.5rem auto 3.5rem;padding:0 1.25rem;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:2.4rem 2.2rem;box-shadow:0 1px 3px rgba(10,17,31,.05);}
+  h2{font-size:1.15rem;font-weight:700;color:var(--navy);margin:1.8rem 0 .6rem;padding-right:.85rem;border-right:3px solid var(--gold);}
+  h2:first-of-type{margin-top:0}
+  p{font-size:.97rem;margin-bottom:.7rem}
+  .contact-card{background:var(--navy);border-radius:12px;padding:1.6rem 1.5rem;text-align:center;margin:1.2rem 0;}
+  .contact-card .label{color:#9AA5B5;font-size:.85rem;margin-bottom:.4rem}
+  .contact-card a{color:var(--gold);text-decoration:none;font-size:1.15rem;font-weight:600}
+  .qa{border-bottom:1px solid var(--line);padding:1rem 0}
+  .qa:last-child{border-bottom:none}
+  .qa .q{font-weight:600;color:var(--navy);margin-bottom:.3rem}
+  .qa .a{color:var(--muted);font-size:.94rem}
+  footer{text-align:center;color:var(--muted);font-size:.82rem;padding:1.5rem 1rem 2.5rem;}
+  footer a{color:var(--teal);text-decoration:none}
+  html[lang="en"]{direction:ltr}
+  html[lang="en"] body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif}
+  html[lang="en"] h2{padding-right:0;padding-left:.85rem;border-right:none;border-left:3px solid var(--gold)}
+  .en{display:none}
+  html[lang="en"] .ar{display:none}
+  html[lang="en"] .en{display:block}
+  .ar-inline{display:inline}
+  html[lang="en"] .ar-inline{display:none}
+  .en-inline{display:none}
+  html[lang="en"] .en-inline{display:inline}
+  @media (max-width:600px){.card{padding:1.6rem 1.2rem}body{font-size:15px}}
+</style>
 </head>
 <body>
-  <div class="logo">Prova<span class="accent">tto</span></div>
-  <div class="tagline">Proof &middot; Provenance &middot; Trust</div>
-
-  <div class="card">
-    <h1>الدعم الفني</h1>
-    <p>مرحباً بك في صفحة الدعم الفني لتطبيق Provatto — تطبيق توثيق وسجل ملكية الساعات الفاخرة.</p>
-    <p>إذا واجهت أي مشكلة في التطبيق، أو عندك سؤال أو اقتراح، تواصل معنا عبر البريد الإلكتروني وسنرد عليك في أقرب وقت ممكن:</p>
-    <a class="email-btn" href="mailto:zwashmi@gmail.com?subject=Provatto%20Support">راسلنا عبر البريد الإلكتروني</a>
-
-    <hr class="divider">
-
-    <div class="en">
-      <h2>Support</h2>
-      <p>Welcome to the Provatto support page — the luxury watch documentation and ownership-record app.</p>
-      <p>If you encounter any issue, or have a question or suggestion, contact us by email and we will get back to you as soon as possible:</p>
-      <a class="email-btn" href="mailto:zwashmi@gmail.com?subject=Provatto%20Support">Contact us by email</a>
-    </div>
+<header>
+  <div class="brand">PROVATTO<span> | بروفاتو</span></div>
+  <div class="doc-title"><span class="ar-inline">الدعم والمساعدة</span><span class="en-inline">Help &amp; Support</span></div>
+  <div class="lang-toggle">
+    <button id="btn-ar" class="active" onclick="setLang('ar')">العربية</button>
+    <button id="btn-en" onclick="setLang('en')">English</button>
   </div>
+</header>
+<nav class="docnav">
+  <a href="privacy.html"><span class="ar-inline">سياسة الخصوصية</span><span class="en-inline">Privacy Policy</span></a>
+  <a href="terms.html"><span class="ar-inline">شروط الاستخدام</span><span class="en-inline">Terms of Use</span></a>
+  <a href="support.html" class="current"><span class="ar-inline">الدعم</span><span class="en-inline">Support</span></a>
+</nav>
+<main>
+<div class="card">
 
-  <p class="note">
-    البريد الإلكتروني / Email: <a class="plain" href="mailto:zwashmi@gmail.com">zwashmi@gmail.com</a><br>
-    مؤسسة زياد ناصر الوشمي للتجارة — س.ت 7053851809 — الرياض، المملكة العربية السعودية
-  </p>
+<div class="ar">
+<h2>تواصل معنا</h2>
+<p>يسعدنا مساعدتك في أي استفسار أو مشكلة تواجهك أثناء استخدام تطبيق بروفاتو. راسلنا وسنرد عليك في أقرب وقت ممكن.</p>
+<div class="contact-card">
+  <div class="label">البريد الإلكتروني للدعم</div>
+  <a href="mailto:zwashmi@gmail.com">zwashmi@gmail.com</a>
+</div>
+
+<h2>الأسئلة الشائعة</h2>
+<div class="qa">
+  <div class="q">ما هو تطبيق بروفاتو؟</div>
+  <div class="a">تطبيق يساعدك على تنظيم ساعاتك الفاخرة وتوثيق تفاصيلها وأحداثها في سجل رقمي خاص بك.</div>
+</div>
+<div class="qa">
+  <div class="q">هل يتحقق التطبيق من أصالة الساعات؟</div>
+  <div class="a">لا. بروفاتو أداة تنظيم وتوثيق شخصي فقط، ولا يتحقق من الأصالة ولا يقدم تقييمًا رسميًا للقيمة.</div>
+</div>
+<div class="qa">
+  <div class="q">ما معنى "نقل السجل الرقمي"؟</div>
+  <div class="a">هو توثيق رقمي داخل التطبيق لانتقال سجل ساعة إلى مستخدم آخر بموافقة الطرفين. وهو سجل توثيقي فقط ولا يُعد نقل ملكية قانونيًا.</div>
+</div>
+<div class="qa">
+  <div class="q">كيف أحذف حسابي؟</div>
+  <div class="a">راسلنا على البريد أعلاه بطلب حذف الحساب، وسنعالج طلبك خلال مدة لا تتجاوز 30 يومًا وفق سياسة الخصوصية.</div>
+</div>
+<div class="qa">
+  <div class="q">هل بياناتي آمنة؟</div>
+  <div class="a">نتخذ تدابير تقنية وتنظيمية لحماية بياناتك. للتفاصيل، راجع <a href="privacy.html" style="color:var(--teal);font-weight:600">سياسة الخصوصية</a>.</div>
+</div>
+</div>
+
+<div class="en">
+<h2>Contact Us</h2>
+<p>We're happy to help with any question or issue you face while using Provatto. Email us and we'll get back to you as soon as possible.</p>
+<div class="contact-card">
+  <div class="label">Support email</div>
+  <a href="mailto:zwashmi@gmail.com">zwashmi@gmail.com</a>
+</div>
+
+<h2>Frequently Asked Questions</h2>
+<div class="qa">
+  <div class="q">What is Provatto?</div>
+  <div class="a">An app that helps you organize your luxury watches and document their details and events in your own digital record.</div>
+</div>
+<div class="qa">
+  <div class="q">Does the app verify watch authenticity?</div>
+  <div class="a">No. Provatto is a personal organization and documentation tool only. It does not verify authenticity or provide an official valuation.</div>
+</div>
+<div class="qa">
+  <div class="q">What does "digital record transfer" mean?</div>
+  <div class="a">It's an in-app documentation of transferring a watch's record to another user with mutual consent. It is a documentary record only and is not a legal transfer of ownership.</div>
+</div>
+<div class="qa">
+  <div class="q">How do I delete my account?</div>
+  <div class="a">Email us at the address above requesting account deletion. We'll process your request within 30 days in accordance with the Privacy Policy.</div>
+</div>
+<div class="qa">
+  <div class="q">Is my data safe?</div>
+  <div class="a">We take technical and organizational measures to protect your data. For details, see the <a href="privacy.html" style="color:var(--teal);font-weight:600">Privacy Policy</a>.</div>
+</div>
+</div>
+
+</div>
+</main>
+<footer>
+  <span class="ar-inline">© 2026 مؤسسة زياد ناصر الوشمي للتجارة — سجل تجاري 7053851809</span>
+  <span class="en-inline">© 2026 Ziad Nasser Alwashmi Trading Est. — CR 7053851809</span>
+</footer>
+<script>
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+    document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    try { localStorage.setItem('provatto-lang', lang); } catch(e){}
+  }
+  (function(){
+    var saved = 'ar';
+    try { saved = localStorage.getItem('provatto-lang') || 'ar'; } catch(e){}
+    setLang(saved);
+  })();
+</script>
 </body>
 </html>
