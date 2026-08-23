@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="240" viewBox="0 0 200 240">
+  <title>Provatto — original luxury watch illustration (brand-neutral, no real model)</title>
+  <rect x="82" y="8" width="36" height="52" rx="10" fill="#0C1526" stroke="#C9A86A" stroke-width="1.5"></rect>
+  <rect x="82" y="180" width="36" height="52" rx="10" fill="#0C1526" stroke="#C9A86A" stroke-width="1.5"></rect>
+  <circle cx="100" cy="120" r="66" fill="#0F1B30" stroke="#C9A86A" stroke-width="2"></circle>
+  <circle cx="100" cy="120" r="55" fill="#0B1424" stroke="rgba(201,168,106,.5)" stroke-width="1"></circle>
+  <g stroke="#C9A86A" stroke-width="1.6" stroke-linecap="round">
+    <line x1="100" y1="60" x2="100" y2="70"></line><line x1="100" y1="170" x2="100" y2="180"></line>
+    <line x1="40" y1="120" x2="50" y2="120"></line><line x1="150" y1="120" x2="160" y2="120"></line>
+  </g>
+  <g stroke="rgba(201,168,106,.55)" stroke-width="1">
+    <line x1="100" y1="63" x2="100" y2="69" transform="rotate(30 100 120)"></line>
+    <line x1="100" y1="63" x2="100" y2="69" transform="rotate(60 100 120)"></line>
+    <line x1="100" y1="63" x2="100" y2="69" transform="rotate(120 100 120)"></line>
+    <line x1="100" y1="63" x2="100" y2="69" transform="rotate(150 100 120)"></line>
+    <line x1="100" y1="63" x2="100" y2="69" transform="rotate(210 100 120)"></line>
+    <line x1="100" y1="63" x2="100" y2="69" transform="rotate(240 100 120)"></line>
+    <line x1="100" y1="63" x2="100" y2="69" transform="rotate(300 100 120)"></line>
+    <line x1="100" y1="63" x2="100" y2="69" transform="rotate(330 100 120)"></line>
+  </g>
+  <line x1="100" y1="120" x2="100" y2="82" stroke="#EEF1F5" stroke-width="2.4" stroke-linecap="round"></line>
+  <line x1="100" y1="120" x2="128" y2="120" stroke="#3ED0CB" stroke-width="2.4" stroke-linecap="round"></line>
+  <circle cx="100" cy="120" r="3.4" fill="#C9A86A"></circle>
+</svg>

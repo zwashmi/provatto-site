@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="378" viewBox="0 0 600 378">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2A2F39"></stop><stop offset="0.26" stop-color="#3B434F"></stop>
+      <stop offset="0.52" stop-color="#2E343E"></stop><stop offset="0.76" stop-color="#454E5B"></stop>
+      <stop offset="1" stop-color="#292E37"></stop>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="378" rx="20" fill="url(#metal)"></rect>
+  <rect x="14" y="14" width="572" height="350" rx="12" fill="none" stroke="rgba(201,168,106,.6)" stroke-width="1"></rect>
+  <text x="44" y="70" font-family="IBM Plex Sans, sans-serif" font-size="34" font-weight="600" fill="#EEF1F5">Prova<tspan fill="#3ED0CB">tto</tspan></text>
+  <g transform="translate(524,40)">
+    <circle cx="18" cy="18" r="17" fill="none" stroke="#C9A86A" stroke-width="1.4"></circle>
+    <circle cx="18" cy="18" r="13" fill="none" stroke="#3ED0CB" stroke-width="0.8"></circle>
+    <line x1="18" y1="2" x2="18" y2="7" stroke="#C9A86A" stroke-width="1.4"></line>
+    <line x1="18" y1="0" x2="18" y2="9" stroke="#C9A86A" stroke-width="1.4" transform="rotate(90 18 18)"></line>
+    <line x1="18" y1="9" x2="18" y2="18" stroke="#3ED0CB" stroke-width="1.4" stroke-linecap="round"></line>
+  </g>
+  <line x1="44" y1="196" x2="88" y2="196" stroke="rgba(201,168,106,.7)" stroke-width="1"></line>
+  <text x="44" y="234" font-family="IBM Plex Sans Arabic, sans-serif" font-size="34" font-weight="600" fill="#EEF1F5">سجل رقمي موثّق</text>
+  <text x="44" y="264" font-family="IBM Plex Sans, sans-serif" font-size="18" letter-spacing="3" fill="#C9A86A">VERIFIED DIGITAL RECORD</text>
+  <text x="44" y="316" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" fill="#AEB6C4">رقم السجل · Record</text>
+  <text x="44" y="344" font-family="IBM Plex Sans, sans-serif" font-size="24" font-weight="600" fill="#EEF1F5">#PRV-0482</text>
+  <text x="556" y="344" text-anchor="end" font-family="IBM Plex Sans, sans-serif" font-size="13" letter-spacing="3" fill="rgba(201,168,106,.9)">PROOF · PROVENANCE · TRUST</text>
+  <g transform="translate(462,250)">
+    <rect x="0" y="0" width="94" height="94" rx="8" fill="#EEF1F5"></rect>
+    <g fill="#232833" transform="translate(9,9)">
+      <rect x="0" y="0" width="20" height="20"></rect><rect x="6" y="6" width="8" height="8" fill="#EEF1F5"></rect>
+      <rect x="56" y="0" width="20" height="20"></rect><rect x="62" y="6" width="8" height="8" fill="#EEF1F5"></rect>
+      <rect x="0" y="56" width="20" height="20"></rect><rect x="6" y="62" width="8" height="8" fill="#EEF1F5"></rect>
+      <rect x="30" y="4" width="6" height="6"></rect><rect x="42" y="4" width="6" height="6"></rect><rect x="30" y="16" width="6" height="6"></rect>
+      <rect x="4" y="30" width="6" height="6"></rect><rect x="16" y="30" width="6" height="6"></rect><rect x="30" y="30" width="6" height="6"></rect><rect x="48" y="30" width="6" height="6"></rect><rect x="62" y="30" width="6" height="6"></rect>
+      <rect x="36" y="42" width="6" height="6"></rect><rect x="54" y="42" width="6" height="6"></rect><rect x="30" y="54" width="6" height="6"></rect><rect x="42" y="60" width="6" height="6"></rect>
+      <rect x="56" y="54" width="6" height="6"></rect><rect x="66" y="60" width="6" height="6"></rect><rect x="42" y="48" width="6" height="6"></rect>
+    </g>
+  </g>
+</svg>

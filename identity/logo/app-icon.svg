@@ -1,0 +1,16 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <title>Provatto app icon</title>
+  <rect x="0" y="0" width="512" height="512" rx="114" fill="#0A111F"></rect>
+  <g transform="translate(256,256)">
+    <circle cx="0" cy="0" r="150" fill="none" stroke="#C9A86A" stroke-width="6"></circle>
+    <circle cx="0" cy="0" r="126" fill="none" stroke="#12B5B0" stroke-width="3"></circle>
+    <line x1="0" y1="-126" x2="0" y2="-108" stroke="#C9A86A" stroke-width="6"></line>
+    <line x1="0" y1="126" x2="0" y2="108" stroke="#C9A86A" stroke-width="6"></line>
+    <line x1="-126" y1="0" x2="-108" y2="0" stroke="#C9A86A" stroke-width="6"></line>
+    <line x1="126" y1="0" x2="108" y2="0" stroke="#C9A86A" stroke-width="6"></line>
+    <line x1="0" y1="0" x2="0" y2="-74" stroke="#12B5B0" stroke-width="7" stroke-linecap="round"></line>
+    <line x1="0" y1="0" x2="48" y2="30" stroke="#C9A86A" stroke-width="7" stroke-linecap="round"></line>
+    <circle cx="0" cy="0" r="10" fill="#C9A86A"></circle>
+    <path d="M-30 -158 L0 -184 L30 -158 L18 -158 L18 -148 L-18 -148 L-18 -158 Z" fill="#C9A86A"></path>
+  </g>
+</svg>

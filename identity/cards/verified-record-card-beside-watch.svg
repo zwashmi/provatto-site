@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+  <title>Provatto — Verified Digital Record card beside the watch (studio)</title>
+  <defs>
+    <radialGradient id="stg" cx="50%" cy="18%" r="90%"><stop offset="0" stop-color="#FBFAF7"></stop><stop offset="0.7" stop-color="#EEEBE4"></stop><stop offset="1" stop-color="#E6E1D7"></stop></radialGradient>
+    <linearGradient id="mtl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2A2F39"></stop><stop offset="0.5" stop-color="#3B434F"></stop><stop offset="1" stop-color="#292E37"></stop></linearGradient>
+    <linearGradient id="csh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16233C"></stop><stop offset="1" stop-color="#0C1526"></stop></linearGradient>
+  </defs>
+  <rect width="900" height="500" rx="20" fill="url(#stg)"></rect>
+  
+  <ellipse cx="270" cy="250" rx="150" ry="112" fill="url(#csh)"></ellipse>
+  <g transform="translate(270,250) scale(0.78)">
+    <rect x="-18" y="-112" width="36" height="52" rx="10" fill="#0C1526" stroke="#C9A86A" stroke-width="1.5"></rect>
+    <rect x="-18" y="60" width="36" height="52" rx="10" fill="#0C1526" stroke="#C9A86A" stroke-width="1.5"></rect>
+    <circle cx="0" cy="0" r="66" fill="#0F1B30" stroke="#C9A86A" stroke-width="2"></circle>
+    <circle cx="0" cy="0" r="55" fill="#0B1424" stroke="rgba(201,168,106,.5)" stroke-width="1"></circle>
+    <line x1="0" y1="-38" x2="0" y2="0" stroke="#EEF1F5" stroke-width="2.4" stroke-linecap="round" transform="translate(0,0)"></line>
+    <line x1="0" y1="0" x2="28" y2="0" stroke="#3ED0CB" stroke-width="2.4" stroke-linecap="round"></line>
+    <circle cx="0" cy="0" r="3.4" fill="#C9A86A"></circle>
+  </g>
+  
+  <g transform="translate(470,150)">
+    <rect width="370" height="233" rx="16" fill="url(#mtl)"></rect>
+    <rect x="10" y="10" width="350" height="213" rx="10" fill="none" stroke="rgba(201,168,106,.6)" stroke-width="1"></rect>
+    <text x="28" y="52" font-family="IBM Plex Sans, sans-serif" font-size="24" font-weight="600" fill="#EEF1F5">Prova<tspan fill="#3ED0CB">tto</tspan></text>
+    <text x="28" y="146" font-family="IBM Plex Sans Arabic, sans-serif" font-size="24" font-weight="600" fill="#EEF1F5">سجل رقمي موثّق</text>
+    <text x="28" y="172" font-family="IBM Plex Sans, sans-serif" font-size="13" letter-spacing="2" fill="#C9A86A">VERIFIED DIGITAL RECORD</text>
+    <text x="28" y="210" font-family="IBM Plex Sans, sans-serif" font-size="17" font-weight="600" fill="#EEF1F5">#PRV-0482</text>
+  </g>
+</svg>

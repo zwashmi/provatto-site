@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="96" viewBox="0 0 1440 96">
+  <title>Provatto — website header / nav bar (RTL)</title>
+  <rect width="1440" height="96" fill="#FFFFFF"></rect>
+  <line x1="0" y1="95" x2="1440" y2="95" stroke="#EFECE4" stroke-width="1"></line>
+  
+  <text x="1376" y="58" text-anchor="end" font-family="IBM Plex Sans, sans-serif" font-size="34" font-weight="600" fill="#0A111F">Prova<tspan fill="#12B5B0">tto</tspan></text>
+  
+  <g font-family="IBM Plex Sans Arabic, sans-serif" font-size="21" fill="#565E6C" text-anchor="middle">
+    <text x="900" y="56">الرئيسية</text>
+    <text x="780" y="56">كيف يعمل</text>
+    <text x="670" y="56">الميزات</text>
+    <text x="570" y="56">الأسئلة</text>
+  </g>
+  
+  <rect x="64" y="26" width="180" height="44" rx="12" fill="#12B5B0"></rect>
+  <text x="154" y="55" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="20" font-weight="600" fill="#08211F">حمّل التطبيق</text>
+</svg>

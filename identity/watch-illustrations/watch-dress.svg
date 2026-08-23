@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="240" viewBox="0 0 200 240">
+  <title>Provatto — original dress watch illustration (brand-neutral)</title>
+  <rect x="86" y="10" width="28" height="46" rx="8" fill="#141C2C" stroke="#C9A86A" stroke-width="1.4"></rect>
+  <rect x="86" y="184" width="28" height="46" rx="8" fill="#141C2C" stroke="#C9A86A" stroke-width="1.4"></rect>
+  <circle cx="100" cy="120" r="60" fill="#12203A" stroke="#C9A86A" stroke-width="2"></circle>
+  <circle cx="100" cy="120" r="49" fill="#0C1526" stroke="rgba(201,168,106,.4)" stroke-width="1"></circle>
+  <g stroke="rgba(201,168,106,.7)" stroke-width="1.4" stroke-linecap="round">
+    <line x1="100" y1="68" x2="100" y2="76"></line><line x1="100" y1="164" x2="100" y2="172"></line>
+    <line x1="48" y1="120" x2="56" y2="120"></line><line x1="144" y1="120" x2="152" y2="120"></line>
+  </g>
+  <line x1="100" y1="120" x2="100" y2="86" stroke="#EEF1F5" stroke-width="2" stroke-linecap="round"></line>
+  <line x1="100" y1="120" x2="124" y2="132" stroke="#C9A86A" stroke-width="2" stroke-linecap="round"></line>
+  <circle cx="100" cy="120" r="3" fill="#C9A86A"></circle>
+</svg>
